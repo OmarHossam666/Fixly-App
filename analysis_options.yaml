@@ -1,1 +1,15 @@
+# This file configures the static analysis tools for Dart.
 include: package:flutter_lints/flutter.yaml
+
+linter:
+  # The flutter_lints package already enables the rules below.
+  # You can add them here to be explicit or to customize them.
+  rules:
+    # GOOD: These are the key rules for getting 'const' suggestions.
+    - prefer_const_constructors
+    - prefer_const_declarations
+    - prefer_const_literals_to_create_immutables
+    - prefer_const_constructors_in_immutables
+
+    # You can add other rules here if you want.
+    # For a full list, see: https://dart.dev/lints/rules
