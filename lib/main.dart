@@ -1,3 +1,5 @@
+import 'package:fixly/core/constants/app_colors.dart';
+import 'package:fixly/core/constants/app_styles.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -9,12 +11,15 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
+        backgroundColor: AppColors.lightColors.background,
         body: Center(
-          child: Text('Hello World!'),
+          child: Text('Hello World!', style: AppStyles.light.bodyTextBold),
         ),
       ),
+      themeMode: ThemeMode.dark,
     );
   }
 }
