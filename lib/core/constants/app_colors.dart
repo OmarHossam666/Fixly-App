@@ -63,6 +63,7 @@ abstract class ColorScheme {
   Color get warning;
   Color get error;
 
+  Color get notificationBadge;
   // Social Login Colors
   Color get google;
   Color get facebook;
@@ -134,6 +135,9 @@ class _LightColors implements ColorScheme {
 
   @override
   Color get error => const Color(0xFFEF4444);
+
+  @override
+  Color get notificationBadge => const Color(0xFFF44336);
 
   // Social Login Colors
   @override
@@ -210,6 +214,8 @@ class _DarkColors implements ColorScheme {
   @override
   Color get error => const Color(0xFFF87171);
 
+  @override
+  Color get notificationBadge => const Color(0xFFF44336);
   // Social Login Colors
   @override
   Color get google => const Color(0xFF4285F4);

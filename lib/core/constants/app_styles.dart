@@ -228,7 +228,7 @@ class _DarkTextStyles implements AppTextStyles {
   TextStyle get primaryButton => TextStyle(
         fontFamily: AppStyles._fontFamily,
         fontSize: 14,
-        fontWeight: FontWeight.w500,
+        fontWeight: FontWeight.w600,
         color: _colors.primaryButtonText,
       );
 
