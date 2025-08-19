@@ -1,12 +1,15 @@
 import 'package:fixly/core/routing/routes/customer_routes.dart';
 import 'package:fixly/features/authentication/ui/authentication_screen.dart';
+import 'package:fixly/features/booking_confirmation/ui/booking_confirmation_screen.dart';
+import 'package:fixly/features/review_booking_details/ui/review_booking_details_screen.dart';
+import 'package:fixly/features/technician_profile/ui/technician_profile_screen.dart';
 import 'package:fixly/features/main/ui/main_screen.dart';
 import 'package:fixly/features/onboarding/ui/onboarding_screen.dart';
 import 'package:go_router/go_router.dart';
 
 class CustomerRouterConfig {
   static final GoRouter router = GoRouter(
-    initialLocation: CustomerRoutes.onboardingScreen,
+    initialLocation: CustomerRoutes.technicianProfileScreen,
     routes: [
       GoRoute(
         name: CustomerRoutes.onboardingScreen.substring(1),
@@ -22,6 +25,21 @@ class CustomerRouterConfig {
         path: CustomerRoutes.mainScreen,
         name: CustomerRoutes.mainScreen.substring(1),
         builder: (context, state) => const MainScreen(),
+      ),
+      GoRoute(
+        path: CustomerRoutes.technicianProfileScreen,
+        name: CustomerRoutes.technicianProfileScreen.substring(1),
+        builder: (context, state) => const TechnicianProfileScreen(),
+      ),
+      GoRoute(
+        path: CustomerRoutes.reviewBookingDetailsScreen,
+        name: CustomerRoutes.reviewBookingDetailsScreen.substring(1),
+        builder: (context, state) => const ReviewBookingDetailsScreen(),
+      ),
+      GoRoute(
+        path: CustomerRoutes.bookingConfirmationScreen,
+        name: CustomerRoutes.bookingConfirmationScreen.substring(1),
+        builder: (context, state) => const BookingConfirmationScreen(),
       ),
     ],
   );

@@ -38,7 +38,7 @@ class ServiceCard extends StatelessWidget {
             borderRadius: BorderRadius.circular(16.r),
             border: Border.all(color: borderColor, width: 1.w),
           ),
-          padding: EdgeInsets.all(16.w),
+          padding: EdgeInsets.all(16.r),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,
