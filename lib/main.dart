@@ -1,25 +1,9 @@
-import 'package:fixly/core/constants/app_colors.dart';
-import 'package:fixly/core/constants/app_styles.dart';
+import 'package:fixly/fixly_app.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MainApp());
+void main() async{
+  await ScreenUtil.ensureScreenSize();
+  runApp(const FixlyApp());
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        backgroundColor: AppColors.lightColors.background,
-        body: Center(
-          child: Text('Hello World!', style: AppStyles.light.bodyTextBold),
-        ),
-      ),
-      themeMode: ThemeMode.dark,
-    );
-  }
-}
