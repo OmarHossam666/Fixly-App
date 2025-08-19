@@ -58,6 +58,10 @@ abstract class ColorScheme {
   Color get secondaryButton;
   Color get secondaryButtonText;
 
+  Color get starColor;
+  Color get lightRed;
+  Color get lighterRed;
+
   // Status Colors
   Color get success;
   Color get warning;
@@ -105,6 +109,15 @@ class _LightColors implements ColorScheme {
 
   @override
   Color get textOnAccent => const Color(0xFFFFFFFF); // White
+
+  @override
+  Color get starColor => const Color(0xFFFFD700);
+
+  @override
+  Color get lightRed => const Color.fromARGB(255, 219, 16, 16);
+
+  @override
+  Color get lighterRed => const Color.fromARGB(255, 91, 10, 10);
 
   // Interactive Elements
   @override
@@ -183,6 +196,15 @@ class _DarkColors implements ColorScheme {
 
   @override
   Color get textOnAccent => const Color(0xFFFFFFFF);
+
+  @override
+  Color get starColor => const Color(0xFFFFD700);
+
+  @override
+  Color get lightRed => const Color.fromARGB(255, 219, 16, 16);
+
+  @override
+  Color get lighterRed => const Color.fromARGB(255, 91, 10, 10);
 
   // Interactive Elements
   @override
