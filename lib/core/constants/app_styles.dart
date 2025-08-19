@@ -107,7 +107,6 @@ class _LightTextStyles implements AppTextStyles {
   @override
   TextStyle get sectionHeader => TextStyle(
     fontFamily: AppStyles._fontFamily,
-    customer-phase-1
     fontSize: 18.sp,
   );
 
