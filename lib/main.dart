@@ -1,25 +1,29 @@
-import 'package:fixly/core/constants/app_colors.dart';
-import 'package:fixly/core/constants/app_styles.dart';
+import 'package:fixly/core/routing/routers/customer_router_config.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(const Fixly());
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+class Fixly extends StatelessWidget {
+  const Fixly({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        backgroundColor: AppColors.lightColors.background,
-        body: Center(
-          child: Text('Hello World!', style: AppStyles.light.bodyTextBold),
-        ),
-      ),
-      themeMode: ThemeMode.dark,
+    return ScreenUtilInit(
+      designSize: const Size(393, 852),
+      minTextAdapt: true,
+      splitScreenMode: true,
+      builder: (context, child) {
+        return MaterialApp.router(
+          routerConfig: CustomerRouterConfig.router,
+          debugShowCheckedModeBanner: false,
+          theme: ThemeData(brightness: Brightness.light),
+          darkTheme: ThemeData(brightness: Brightness.dark),
+          themeMode: ThemeMode.dark,
+        );
+      },
     );
   }
 }
