@@ -43,11 +43,16 @@ abstract class AppTextStyles {
 
   // --- BUTTONS ---
   TextStyle get primaryButton;
+  TextStyle get onlineButton;
+  TextStyle get statisticsWidgetText;
+  TextStyle get green16Bold;
 
   // --- SPECIALIZED STYLES ---
   TextStyle get logoSubtitle;
   TextStyle get errorTitle;
   TextStyle get errorSubtitle;
+
+  TextStyle get bold14Text;
 }
 
 /// Implements the [AppTextStyles] for the **light** theme.
@@ -58,9 +63,164 @@ class _LightTextStyles implements AppTextStyles {
   @override
   TextStyle get headline => TextStyle(
     fontFamily: AppStyles._fontFamily,
+
     fontSize: 24.sp,
     fontWeight: FontWeight.w600,
     color: _colors.text,
+  );
+
+
+  @override
+  TextStyle get statisticsWidgetText => TextStyle(
+    fontFamily: AppStyles._fontFamily,
+    fontSize: 28,
+    fontWeight: FontWeight.w900,
+    color: _colors.text,
+  );
+
+  @override
+  TextStyle get bold14Text => TextStyle(
+    fontFamily: AppStyles._fontFamily,
+    fontSize: 14,
+    fontWeight: FontWeight.bold,
+    color: _colors.textOnAccent,
+  );
+
+
+  @override
+  TextStyle get screenTitle => TextStyle(
+    fontFamily: AppStyles._fontFamily,
+    fontSize: 20.sp,
+    fontWeight: FontWeight.bold,
+    color: _colors.text,
+  );
+
+
+  @override
+  TextStyle get green16Bold => TextStyle(
+    fontSize: 16,
+    fontWeight: FontWeight.bold,
+    color: _colors.success,
+  );
+
+
+  @override
+  TextStyle get sectionHeader => TextStyle(
+    fontFamily: AppStyles._fontFamily,
+    customer-phase-1
+    fontSize: 18.sp,
+  );
+
+  @override
+  TextStyle get cardTitle => TextStyle(
+    fontFamily: AppStyles._fontFamily,
+    fontSize: 16.sp,
+    fontWeight: FontWeight.w600,
+    color: _colors.text,
+  );
+
+  @override
+  TextStyle get bodyText => TextStyle(
+    fontFamily: AppStyles._fontFamily,
+    fontSize: 16.sp,
+    fontWeight: FontWeight.normal,
+    color: _colors.text,
+  );
+
+  @override
+  TextStyle get bodyTextBold => TextStyle(
+    fontFamily: AppStyles._fontFamily,
+    fontSize: 16.sp,
+    fontWeight: FontWeight.bold,
+    color: _colors.text,
+  );
+
+  @override
+  TextStyle get bodyTextSmall => TextStyle(
+    fontFamily: AppStyles._fontFamily,
+    fontSize: 14.sp,
+    fontWeight: FontWeight.normal,
+    color: _colors.textSecondary,
+    height: 1.28,
+  );
+
+  @override
+  TextStyle get caption => TextStyle(
+    fontFamily: AppStyles._fontFamily,
+    fontSize: 12.sp,
+    fontWeight: FontWeight.normal,
+    color: _colors.textSecondary,
+    height: 1.33,
+  );
+
+  @override
+  TextStyle get primaryButton => TextStyle(
+    fontFamily: AppStyles._fontFamily,
+    fontSize: 16.sp,
+    fontWeight: FontWeight.bold,
+    color: _colors.primaryButtonText,
+  );
+  
+  @override
+  TextStyle get onlineButton => TextStyle(
+    fontFamily: AppStyles._fontFamily,
+    fontSize: 18,
+    fontWeight: FontWeight.w800,
+    color: _colors.primaryButtonText,
+  );
+
+  @override
+  TextStyle get logoSubtitle => TextStyle(
+    fontFamily: AppStyles._fontFamily,
+    fontSize: 12.sp,
+    fontWeight: FontWeight.bold,
+    color: _colors.accent,
+  );
+
+  @override
+   TextStyle get errorTitle => TextStyle(
+    fontFamily: AppStyles._fontFamily,
+    fontSize: 32.sp,
+    fontWeight: FontWeight.w500,
+    color: const Color(0xFF111111), // Specific color for light mode error
+  );
+
+  @override
+  TextStyle get errorSubtitle => TextStyle(
+    fontFamily: AppStyles._fontFamily,
+    color: _colors.textSecondary,
+    fontSize: 16.sp,
+    height: 1.5,
+  );
+}
+
+/// Implements the [AppTextStyles] for the **dark** theme.
+class _DarkTextStyles implements AppTextStyles {
+  // Using a private static instance of dark colors for efficiency.
+  static final _colors = AppColors.darkColors;
+
+  @override
+  TextStyle get headline => TextStyle(
+    fontFamily: AppStyles._fontFamily,
+    fontSize: 24.sp,
+    fontWeight: FontWeight.w600,
+    color: _colors.text,
+  );
+
+  @override
+  TextStyle get statisticsWidgetText => TextStyle(
+    fontFamily: AppStyles._fontFamily,
+    fontSize: 28,
+    fontWeight: FontWeight.bold,
+    color: _colors.text,
+  );
+
+  @override
+  TextStyle get bold14Text => TextStyle(
+    fontFamily: AppStyles._fontFamily,
+    fontSize: 14,
+    fontWeight: FontWeight.bold,
+    color: _colors.textOnAccent,
   );
 
   @override
@@ -70,6 +230,14 @@ class _LightTextStyles implements AppTextStyles {
     fontWeight: FontWeight.bold,
     color: _colors.text,
   );
+
+  @override
+  TextStyle get green16Bold => TextStyle(
+    fontSize: 16,
+    fontWeight: FontWeight.bold,
+    color: _colors.success,
+  );
+
 
   @override
   TextStyle get sectionHeader => TextStyle(
@@ -130,106 +298,10 @@ class _LightTextStyles implements AppTextStyles {
   );
 
   @override
-  TextStyle get logoSubtitle => TextStyle(
+  TextStyle get onlineButton => TextStyle(
     fontFamily: AppStyles._fontFamily,
-    fontSize: 12.sp,
-    fontWeight: FontWeight.bold,
-    color: _colors.accent,
-  );
-
-  @override
-  TextStyle get errorTitle => TextStyle(
-    fontFamily: AppStyles._fontFamily,
-    fontSize: 32.sp,
-    fontWeight: FontWeight.w500,
-    color: const Color(0xFF111111), // Specific color for light mode error
-  );
-
-  @override
-  TextStyle get errorSubtitle => TextStyle(
-    fontFamily: AppStyles._fontFamily,
-    color: _colors.textSecondary,
-    fontSize: 16.sp,
-    height: 1.5,
-  );
-}
-
-/// Implements the [AppTextStyles] for the **dark** theme.
-class _DarkTextStyles implements AppTextStyles {
-  // Using a private static instance of dark colors for efficiency.
-  static final _colors = AppColors.darkColors;
-
-  @override
-  TextStyle get headline => TextStyle(
-    fontFamily: AppStyles._fontFamily,
-    fontSize: 24.sp,
-    fontWeight: FontWeight.w600,
-    color: _colors.text,
-  );
-
-  @override
-  TextStyle get screenTitle => TextStyle(
-    fontFamily: AppStyles._fontFamily,
-    fontSize: 20.sp,
-    fontWeight: FontWeight.bold,
-    color: _colors.text,
-  );
-
-  @override
-  TextStyle get sectionHeader => TextStyle(
-    fontFamily: AppStyles._fontFamily,
-    fontSize: 18.sp,
-    fontWeight: FontWeight.w600,
-    color: _colors.text,
-  );
-
-  @override
-  TextStyle get cardTitle => TextStyle(
-    fontFamily: AppStyles._fontFamily,
-    fontSize: 16.sp,
-    fontWeight: FontWeight.w600,
-    color: _colors.text,
-  );
-
-  @override
-  TextStyle get bodyText => TextStyle(
-    fontFamily: AppStyles._fontFamily,
-    fontSize: 16.sp,
-    fontWeight: FontWeight.normal,
-    color: _colors.text,
-  );
-
-  @override
-  TextStyle get bodyTextBold => TextStyle(
-    fontFamily: AppStyles._fontFamily,
-    fontSize: 16.sp,
-    fontWeight: FontWeight.bold,
-    color: _colors.text,
-  );
-
-  @override
-  TextStyle get bodyTextSmall => TextStyle(
-    fontFamily: AppStyles._fontFamily,
-    fontSize: 14.sp,
-    fontWeight: FontWeight.normal,
-    color: _colors.textSecondary,
-    height: 1.28,
-  );
-
-  @override
-  TextStyle get caption => TextStyle(
-    fontFamily: AppStyles._fontFamily,
-    fontSize: 12.sp,
-    fontWeight: FontWeight.normal,
-    color: _colors.textSecondary,
-    height: 1.33,
-  );
-
-  @override
-  TextStyle get primaryButton => TextStyle(
-    fontFamily: AppStyles._fontFamily,
-    fontSize: 16.sp,
-    fontWeight: FontWeight.bold,
+    fontSize: 18,
+    fontWeight: FontWeight.w900,
     color: _colors.primaryButtonText,
   );
 
