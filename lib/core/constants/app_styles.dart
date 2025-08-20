@@ -69,7 +69,6 @@ class _LightTextStyles implements AppTextStyles {
     color: _colors.text,
   );
 
-
   @override
   TextStyle get statisticsWidgetText => TextStyle(
     fontFamily: AppStyles._fontFamily,
@@ -86,7 +85,6 @@ class _LightTextStyles implements AppTextStyles {
     color: _colors.textOnAccent,
   );
 
-
   @override
   TextStyle get screenTitle => TextStyle(
     fontFamily: AppStyles._fontFamily,
@@ -95,7 +93,6 @@ class _LightTextStyles implements AppTextStyles {
     color: _colors.text,
   );
 
-
   @override
   TextStyle get green16Bold => TextStyle(
     fontSize: 16,
@@ -103,12 +100,12 @@ class _LightTextStyles implements AppTextStyles {
     color: _colors.success,
   );
 
-
   @override
   TextStyle get sectionHeader => TextStyle(
     fontFamily: AppStyles._fontFamily,
-    customer-phase-1
     fontSize: 18.sp,
+    fontWeight: FontWeight.w600,
+    color: _colors.text,
   );
 
   @override
@@ -160,7 +157,7 @@ class _LightTextStyles implements AppTextStyles {
     fontWeight: FontWeight.bold,
     color: _colors.primaryButtonText,
   );
-  
+
   @override
   TextStyle get onlineButton => TextStyle(
     fontFamily: AppStyles._fontFamily,
@@ -178,7 +175,7 @@ class _LightTextStyles implements AppTextStyles {
   );
 
   @override
-   TextStyle get errorTitle => TextStyle(
+  TextStyle get errorTitle => TextStyle(
     fontFamily: AppStyles._fontFamily,
     fontSize: 32.sp,
     fontWeight: FontWeight.w500,
@@ -237,7 +234,6 @@ class _DarkTextStyles implements AppTextStyles {
     fontWeight: FontWeight.bold,
     color: _colors.success,
   );
-
 
   @override
   TextStyle get sectionHeader => TextStyle(

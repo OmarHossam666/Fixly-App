@@ -1,10 +1,10 @@
 import 'package:fixly/core/routing/routes/customer_routes.dart';
-import 'package:fixly/features/authentication/ui/authentication_screen.dart';
-import 'package:fixly/features/booking_confirmation/ui/booking_confirmation_screen.dart';
-import 'package:fixly/features/review_booking_details/ui/review_booking_details_screen.dart';
-import 'package:fixly/features/technician_profile/ui/technician_profile_screen.dart';
-import 'package:fixly/features/main/ui/main_screen.dart';
-import 'package:fixly/features/onboarding/ui/onboarding_screen.dart';
+import 'package:fixly/features/customer/authentication/ui/authentication_screen.dart';
+import 'package:fixly/features/customer/booking_confirmation/ui/booking_confirmation_screen.dart';
+import 'package:fixly/features/customer/main/ui/main_screen.dart';
+import 'package:fixly/features/customer/onboarding/ui/onboarding_screen.dart';
+import 'package:fixly/features/customer/review_booking_details/ui/review_booking_details_screen.dart';
+import 'package:fixly/features/customer/technician_profile/ui/technician_profile_screen.dart';
 import 'package:go_router/go_router.dart';
 
 class CustomerRouterConfig {

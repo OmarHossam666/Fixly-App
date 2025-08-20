@@ -90,7 +90,7 @@ class _JobTechnicianScreenState extends State<TechnicianJobScreen>
           ),
 
           // Canceled Tab
-          Center(child: Text("No Canceled Jobs")),
+          const Center(child: Text("No Canceled Jobs")),
         ],
       ),
     );
