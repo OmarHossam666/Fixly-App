@@ -1,0 +1,301 @@
+import 'package:fixly/core/constants/app_colors.dart';
+import 'package:fixly/core/constants/app_styles.dart';
+import 'package:fixly/core/helpers/spacing.dart';
+import 'package:fixly/core/widgets/surface_dark.dart';
+import 'package:fixly/features/onboarding/ui/widgets/feature_item.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+class WhoAreYouScreen extends StatelessWidget {
+  const WhoAreYouScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: context.colors.background,
+      body: SafeArea(
+        child: Padding(
+          padding: EdgeInsets.all(16),
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                Container(
+                  width: 80,
+                  height: 80,
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                      colors: [
+                        context.colors.primary.withAlpha(140),
+                        context.colors.accent.withAlpha(140),
+                      ],
+                    ),
+                    borderRadius: BorderRadius.circular(40.r),
+                  ),
+                  child: Icon(
+                    Icons.build_rounded,
+                    color: Colors.white,
+                    size: 40,
+                  ),
+                ),
+
+                verticalSpacing(15),
+
+                // Welcome title
+                Text(
+                  'Welcome to Fixly',
+                  style: context.textStyles.bodyText,
+                  textAlign: TextAlign.center,
+                ),
+
+                verticalSpacing(30),
+
+                // Subtitle
+                Text(
+                  'Who are you?',
+                  style: context.textStyles.bodyTextBold.copyWith(
+                    fontSize: 20.sp,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+
+                verticalSpacing(20),
+
+                // "I need services" card
+                SurfaceDark(
+                  borderColorAll: true,
+                  borderRadiusAll: true,
+                  allRadius: 16,
+                  padding: EdgeInsets.all(20),
+                  margin: EdgeInsets.only(bottom: 24),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        children: [
+                          Container(
+                            width: 48,
+                            height: 48,
+                            decoration: BoxDecoration(
+                              color: context.colors.primary,
+                              borderRadius: BorderRadius.circular(24),
+                            ),
+                            child: Icon(
+                              Icons.person,
+                              color: Colors.white,
+                              size: 24,
+                            ),
+                          ),
+                          horizontalSpacing(16),
+                          Expanded(
+                            child: Text(
+                              'I need services',
+                              style: context.textStyles.bodyTextBold.copyWith(
+                                fontSize: 20.sp,
+                                color: context.colors.facebook,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+
+                      verticalSpacing(16),
+
+                      Text(
+                        'Book trusted professionals for home repairs and maintenance',
+                        style: context.textStyles.bodyTextSmall,
+                      ),
+
+                      verticalSpacing(20),
+
+                      // Features grid
+                      Row(
+                        children: [
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                FeatureItem(
+                                  icon: Icons.verified,
+                                  text: 'Verified Technicians',
+                                  context: context,
+                                  color: context.colors.facebook,
+                                ),
+                                verticalSpacing(12),
+                                FeatureItem(
+                                  icon: Icons.security,
+                                  text: 'Secure Payments',
+                                  context: context,
+                                  color: context.colors.facebook,
+                                ),
+                              ],
+                            ),
+                          ),
+                          horizontalSpacing(10),
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                FeatureItem(
+                                  icon: Icons.track_changes,
+                                  text: 'Real-time Tracking',
+                                  context: context,
+                                  color: context.colors.facebook,
+                                ),
+                                verticalSpacing(12),
+                                FeatureItem(
+                                  icon: Icons.verified_user,
+                                  text: 'Quality Guarantee',
+                                  context: context,
+                                  color: context.colors.facebook,
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+
+                // "I provide services" card
+                SurfaceDark(
+                  borderColorAll: true,
+                  borderRadiusAll: true,
+                  allRadius: 16,
+                  padding: EdgeInsets.all(20),
+                  margin: EdgeInsets.only(bottom: 48),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        children: [
+                          Container(
+                            width: 48,
+                            height: 48,
+                            decoration: BoxDecoration(
+                              color: context.colors.accent,
+                              borderRadius: BorderRadius.circular(24),
+                            ),
+                            child: Icon(
+                              Icons.build,
+                              color: context.colors.textOnAccent,
+                              size: 24,
+                            ),
+                          ),
+                          horizontalSpacing(16),
+                          Expanded(
+                            child: Text(
+                              'I provide services',
+                              style: context.textStyles.bodyTextBold.copyWith(
+                                fontSize: 20.sp,
+                                color: context.colors.accent,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+
+                      verticalSpacing(16),
+
+                      Text(
+                        'Join our network of skilled professionals and grow your business',
+                        style: context.textStyles.bodyTextSmall,
+                      ),
+
+                      verticalSpacing(20),
+
+                      // Features grid
+                      Row(
+                        children: [
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                FeatureItem(
+                                  icon: Icons.schedule,
+                                  text: 'Flexible scheduling',
+                                  context: context,
+                                  color: context.colors.accent,
+                                ),
+                                verticalSpacing(12),
+                                FeatureItem(
+                                  icon: Icons.star_rate,
+                                  text: 'Customer reviews',
+                                  color: context.colors.accent,
+                                  context: context,
+                                ),
+                              ],
+                            ),
+                          ),
+                          horizontalSpacing(20),
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                FeatureItem(
+                                  icon: Icons.flash_on,
+                                  text: 'Instant payments',
+                                  context: context,
+                                  color: context.colors.accent,
+                                ),
+                                verticalSpacing(12),
+                                FeatureItem(
+                                  icon: Icons.business_center,
+                                  text: 'Business tools',
+                                  context: context,
+                                  color: context.colors.accent,
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+
+                // Continue button
+                SizedBox(
+                  width: double.infinity,
+                  height: 56,
+                  child: ElevatedButton(
+                    onPressed: () {},
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: context.colors.primary,
+                      foregroundColor: Colors.white,
+                      elevation: 0,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(16),
+                      ),
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          'Continue',
+                          style: context.textStyles.bodyTextBold,
+                        ),
+                        horizontalSpacing(8),
+                        Icon(
+                          Icons.arrow_forward,
+                          color: Colors.white,
+                          size: 20,
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+
+                verticalSpacing(24),
+
+                // Bottom text
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
