@@ -13,6 +13,7 @@ class TechnicianHomeAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SurfaceDark(
+      borderColorBottom: true,
       height: 165.h,
       child: Padding(
         padding: const EdgeInsets.all(16),

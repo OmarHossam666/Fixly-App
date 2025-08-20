@@ -9,7 +9,7 @@ import 'package:go_router/go_router.dart';
 
 class CustomerRouterConfig {
   static final GoRouter router = GoRouter(
-    initialLocation: CustomerRoutes.technicianProfileScreen,
+    initialLocation: CustomerRoutes.mainScreen,
     routes: [
       GoRoute(
         name: CustomerRoutes.onboardingScreen.substring(1),

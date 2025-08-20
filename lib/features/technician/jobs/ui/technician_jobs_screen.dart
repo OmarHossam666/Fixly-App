@@ -1,7 +1,9 @@
 import 'package:fixly/core/constants/app_colors.dart';
 import 'package:fixly/core/constants/app_styles.dart';
+import 'package:fixly/core/helpers/spacing.dart';
 import 'package:fixly/features/technician/jobs/ui/job_card.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class TechnicianJobScreen extends StatefulWidget {
   const TechnicianJobScreen({super.key});
@@ -35,14 +37,15 @@ class _JobTechnicianScreenState extends State<TechnicianJobScreen>
         elevation: 0,
         title: Text("Job History", style: context.textStyles.screenTitle),
         bottom: PreferredSize(
-          preferredSize: const Size.fromHeight(50),
+          preferredSize: Size.fromHeight(75.h),
           child: Container(
-            margin: const EdgeInsets.symmetric(horizontal: 16),
+            margin: EdgeInsets.symmetric(horizontal: 16.w),
             decoration: BoxDecoration(
               color: context.colors.surface,
               borderRadius: BorderRadius.circular(8),
             ),
             child: TabBar(
+              padding: EdgeInsets.symmetric(horizontal: 8.w, vertical: 8.h),
               controller: _tabController,
               indicator: BoxDecoration(
                 color: context.colors.background,
@@ -65,11 +68,12 @@ class _JobTechnicianScreenState extends State<TechnicianJobScreen>
       body: TabBarView(
         controller: _tabController,
         children: [
-          // Completed Tab
           ListView(
-            padding: const EdgeInsets.all(16),
-            children: const [
-              JobCard(
+            padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 16.h),
+
+            children: [
+              verticalSpacing(10),
+              const JobCard(
                 title: "AC Repair",
                 worker: "Ahmed Hassan",
                 time: "2 hours ago",
@@ -77,8 +81,8 @@ class _JobTechnicianScreenState extends State<TechnicianJobScreen>
                 rating: "5",
                 starsNumber: 5,
               ),
-              SizedBox(height: 12),
-              JobCard(
+              verticalSpacing(12),
+              const JobCard(
                 title: "Plumbing Fix",
                 worker: "Fatima Ali",
                 time: "4 hours ago",
@@ -90,7 +94,13 @@ class _JobTechnicianScreenState extends State<TechnicianJobScreen>
           ),
 
           // Canceled Tab
-          Center(child: Text("No Canceled Jobs")),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              verticalSpacing(10),
+              const Center(child: Text("No Canceled Jobs")),
+            ],
+          ),
         ],
       ),
     );
