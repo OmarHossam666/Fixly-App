@@ -6,6 +6,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fixly/core/constants/app_styles.dart';
 import 'package:fixly/core/constants/app_colors.dart';
 
+
 class TechnicianProfileScreenPage extends StatelessWidget {
   const TechnicianProfileScreenPage({super.key});
 
