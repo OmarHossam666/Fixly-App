@@ -1,7 +1,7 @@
 import 'package:fixly/core/constants/app_colors.dart';
 import 'package:fixly/core/constants/app_styles.dart';
-import 'package:fixly/features/technician_profile/data/booking_confirmation_data.dart';
-import 'package:fixly/features/technician_profile/models/booking_confirmation_model.dart';
+import 'package:fixly/features/booking_confirmation/data/booking_confirmation_data.dart';
+import 'package:fixly/features/booking_confirmation/models/booking_confirmation_model.dart';
 import 'package:fixly/features/booking_confirmation/ui/widgets/booking_action_buttons.dart';
 import 'package:fixly/features/booking_confirmation/ui/widgets/booking_confirmation_header.dart';
 import 'package:fixly/features/booking_confirmation/ui/widgets/live_tracking_card.dart';

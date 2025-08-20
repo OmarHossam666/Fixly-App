@@ -1,6 +1,6 @@
 import 'package:fixly/core/constants/app_colors.dart';
 import 'package:fixly/core/constants/app_styles.dart';
-import 'package:fixly/features/technician_profile/models/booking_confirmation_model.dart';
+import 'package:fixly/features/booking_confirmation/models/booking_confirmation_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
