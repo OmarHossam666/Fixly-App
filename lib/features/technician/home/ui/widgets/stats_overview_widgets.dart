@@ -40,13 +40,13 @@ class StatsOverviewWidgets extends StatelessWidget {
               children: [
                 TextSpan(
                   text: tempoNumberStrings[index],
-                  style: AppStyles.dark.statisticsWidgetText.copyWith(
+                  style: context.textStyles.statisticsWidgetText.copyWith(
                     color: numberColors[index],
                   ),
                 ),
                 TextSpan(
                   text: "\n${statsStrings[index]}",
-                  style: AppStyles.dark.bodyText,
+                  style: context.textStyles.bodyText,
                 ),
               ],
             ),

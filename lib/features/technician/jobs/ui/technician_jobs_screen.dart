@@ -95,6 +95,7 @@ class _JobTechnicianScreenState extends State<TechnicianJobScreen>
 
           // Canceled Tab
           Column(
+            
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               verticalSpacing(10),

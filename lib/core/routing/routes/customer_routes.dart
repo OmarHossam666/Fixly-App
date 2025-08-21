@@ -6,4 +6,8 @@ class CustomerRoutes {
   static const String reviewBookingDetailsScreen =
       '/reviewBookingDetailsScreen';
   static const String technicianProfileScreen = '/technicianProfileScreen';
+  static const String serviceInProgressScreen = '/serviceInProgressScreen';
+  static const String finalBillScreen = '/finalBillScreen';
+  static const String ratingAndReviewScreen = '/ratingAndReviewScreen';
+  static const String receiptScreen = '/receiptScreen';
 }
