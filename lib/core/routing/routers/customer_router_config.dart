@@ -1,14 +1,15 @@
+import 'package:fixly/core/routing/routes/shared_routes.dart';
 import 'package:fixly/core/routing/routes/customer_routes.dart';
-import 'package:fixly/features/customer/authentication/ui/authentication_screen.dart';
+import 'package:fixly/features/authentication/ui/authentication_screen.dart';
 import 'package:fixly/features/customer/booking_confirmation/ui/booking_confirmation_screen.dart';
 import 'package:fixly/features/customer/final_bill/ui/final_bill_screen.dart';
-import 'package:fixly/features/customer/main/ui/main_screen.dart';
-import 'package:fixly/features/customer/onboarding/ui/onboarding_screen.dart';
+import 'package:fixly/features/onboarding/ui/customer_onboarding_screen.dart';
 import 'package:fixly/features/customer/rating_and_review/ui/rating_and_review_screen.dart';
 import 'package:fixly/features/customer/receipt/ui/receipt_screen.dart';
 import 'package:fixly/features/customer/review_booking_details/ui/review_booking_details_screen.dart';
 import 'package:fixly/features/customer/service_in_progress/ui/service_in_progress_screen.dart';
 import 'package:fixly/features/customer/technician_profile/ui/technician_profile_screen.dart';
+import 'package:fixly/features/customer/customer_navigation_screen/ui/customer_navigation_screen.dart';
 import 'package:go_router/go_router.dart';
 
 class CustomerRouterConfig {
@@ -18,7 +19,7 @@ class CustomerRouterConfig {
       GoRoute(
         name: CustomerRoutes.onboardingScreen.substring(1),
         path: CustomerRoutes.onboardingScreen,
-        builder: (context, state) => const OnboardingScreen(),
+        builder: (context, state) => const CustomerOnboardingScreen(),
       ),
       GoRoute(
         path: CustomerRoutes.authenticationScreen,
@@ -26,9 +27,8 @@ class CustomerRouterConfig {
         builder: (context, state) => const AuthenticationScreen(),
       ),
       GoRoute(
-        path: CustomerRoutes.mainScreen,
-        name: CustomerRoutes.mainScreen.substring(1),
-        builder: (context, state) => const MainScreen(),
+        path: SharedRoutes.navigationScreen,
+        builder: (context, state) => const CustomerNavigationScreen(),
       ),
       GoRoute(
         path: CustomerRoutes.technicianProfileScreen,

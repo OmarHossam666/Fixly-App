@@ -2,10 +2,10 @@ import 'package:fixly/core/constants/app_colors.dart';
 import 'package:fixly/core/constants/app_styles.dart';
 import 'package:fixly/core/helpers/spacing.dart';
 import 'package:fixly/core/routing/models/router_choice.dart';
-import 'package:fixly/core/who_are_you_screen/ui/widgets/i_need_services_feature_items.dart';
-import 'package:fixly/core/who_are_you_screen/ui/widgets/i_provide_services_feature_items.dart';
+import 'package:fixly/features/who_are_you/ui/widgets/i_need_services_feature_items.dart';
+import 'package:fixly/features/who_are_you/ui/widgets/i_provide_services_feature_items.dart';
 import 'package:fixly/core/widgets/surface_dark.dart';
-import 'package:fixly/features/customer/authentication/ui/widgets/logo_widget.dart';
+import 'package:fixly/features/authentication/ui/widgets/logo_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

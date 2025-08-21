@@ -1,6 +1,6 @@
 import 'package:fixly/core/constants/app_colors.dart';
 import 'package:fixly/core/constants/app_styles.dart';
-import 'package:fixly/core/routing/routes/customer_routes.dart';
+import 'package:fixly/core/routing/routes/shared_routes.dart';
 import 'package:fixly/features/customer/receipt/data/receipt_data.dart';
 import 'package:fixly/features/customer/receipt/models/receipt_model.dart';
 import 'package:fixly/features/customer/receipt/ui/widgets/receipt_actions_widget.dart';
@@ -104,7 +104,7 @@ class _ReceiptScreenState extends State<ReceiptScreen> {
   }
 
   void _navigateToHome() {
-    context.go(CustomerRoutes.mainScreen);
+    context.go(SharedRoutes.navigationScreen);
   }
 
   Future<void> _showSuccessDialog(String title, String message) async {

@@ -1,6 +1,6 @@
 import 'package:fixly/core/constants/app_colors.dart';
 import 'package:fixly/core/helpers/spacing.dart';
-import 'package:fixly/core/who_are_you_screen/ui/widgets/feature_item.dart';
+import 'package:fixly/features/who_are_you/ui/widgets/feature_item.dart';
 import 'package:flutter/material.dart';
 
 class INeedServicesFeatureItems extends StatelessWidget {

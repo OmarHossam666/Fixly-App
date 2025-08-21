@@ -1,6 +1,6 @@
 import 'package:fixly/core/constants/app_colors.dart';
 import 'package:fixly/core/constants/app_styles.dart';
-import 'package:fixly/features/customer/onboarding/models/onboarding_data_model.dart';
+import 'package:fixly/features/onboarding/models/onboarding_data_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:lottie/lottie.dart';

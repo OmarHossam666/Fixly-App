@@ -6,14 +6,14 @@ import 'package:fixly/features/customer/home/ui/widgets/custom_bottom_navigation
 import 'package:fixly/features/customer/profile/ui/profile_screen.dart';
 import 'package:flutter/material.dart';
 
-class MainScreen extends StatefulWidget {
-  const MainScreen({super.key});
+class CustomerNavigationScreen extends StatefulWidget {
+  const CustomerNavigationScreen({super.key});
 
   @override
-  State<MainScreen> createState() => _MainScreenState();
+  State<CustomerNavigationScreen> createState() => _CustomerNavigationScreenState();
 }
 
-class _MainScreenState extends State<MainScreen> {
+class _CustomerNavigationScreenState extends State<CustomerNavigationScreen> {
   final List<Widget> screens = [
     const HomeScreen(),
     const MyBookingsScreen(),

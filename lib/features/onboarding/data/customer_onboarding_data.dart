@@ -1,7 +1,7 @@
 import 'package:fixly/core/constants/app_assets.dart';
-import 'package:fixly/features/customer/onboarding/models/onboarding_data_model.dart';
+import 'package:fixly/features/onboarding/models/onboarding_data_model.dart';
 
-class OnboardingDataList {
+class CustomerOnboardingDataList {
   static const List<OnboardingData> onboardingItems = [
     OnboardingData(
       id: 1,
