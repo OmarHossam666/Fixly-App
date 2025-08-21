@@ -190,8 +190,6 @@ class _WhoAreYouScreenState extends State<WhoAreYouScreen> {
                   hoverColor: Colors.transparent,
                   overlayColor: WidgetStateProperty.all(Colors.transparent),
                   splashFactory: NoSplash.splashFactory,
-                  
-
                   onTap: () {
                     setState(() {
                       routerChoice = RouterChoice.technician;
