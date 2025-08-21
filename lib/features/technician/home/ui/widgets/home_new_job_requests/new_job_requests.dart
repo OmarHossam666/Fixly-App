@@ -21,6 +21,9 @@ class NewJobRequests extends StatelessWidget {
         SizedBox(
           width: double.infinity,
           child: SurfaceDark(
+            borderColorRight: true,
+            borderColorLeft: true,
+            borderColorTop: true,
             topRadius: 15.r,
             child: Padding(
               padding: EdgeInsets.all(10.r),
@@ -33,6 +36,9 @@ class NewJobRequests extends StatelessWidget {
         ),
         verticalSpacing(1),
         SurfaceDark(
+          borderColorRight: true,
+          borderColorLeft: true,
+          borderColorBottom: true,
           bottomRadius: 15,
           padding: EdgeInsets.all(15.r),
           child: OnSurface(

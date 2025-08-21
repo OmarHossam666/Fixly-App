@@ -28,6 +28,7 @@ class StatsOverviewWidgets extends StatelessWidget {
       children: List.generate(statsStrings.length, (index) {
         final isLast = index == statsStrings.length - 1;
         return SurfaceDark(
+          borderColorAll: true,
           alignment: Alignment.center,
           height: 105.w,
           width: 105.w,

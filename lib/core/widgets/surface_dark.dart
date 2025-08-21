@@ -24,6 +24,7 @@ class SurfaceDark extends StatelessWidget {
   final EdgeInsets? padding;
   final EdgeInsets? margin;
   final Alignment? alignment;
+  final List<BoxShadow>? boxShadow;
 
   const SurfaceDark({
     super.key,
@@ -47,7 +48,7 @@ class SurfaceDark extends StatelessWidget {
     this.borderColorRight = false,
     this.padding,
     this.margin,
-    this.alignment,
+    this.alignment, this.boxShadow,
   });
 
   @override
@@ -88,6 +89,7 @@ class SurfaceDark extends StatelessWidget {
                     ? BorderSide(color: AppColors.darkColors.border)
                     : BorderSide.none,
               ),
+              boxShadow: boxShadow,
       ),
       child: child,
     );

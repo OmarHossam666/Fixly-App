@@ -14,26 +14,28 @@ class TechnicianHomeScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: AppColors.darkColors.background,
       body: SafeArea(
-        child: SizedBox(
-          width: double.infinity,
-          child: Column(
-            children: [
-              const TechnicianHomeAppBar(),
-              verticalSpacing(15),
-              SizedBox(
-                width: double.infinity,
-                child: Padding(
-                  padding: EdgeInsets.all(15.w),
-                  child: Column(
-                    children: [
-                      StatsOverviewWidgets(),
-                      verticalSpacing(15),
-                      const NewJobRequests(),
-                    ],
+        child: SingleChildScrollView(
+          child: SizedBox(
+            width: double.infinity,
+            child: Column(
+              children: [
+                const TechnicianHomeAppBar(),
+                verticalSpacing(15),
+                SizedBox(
+                  width: double.infinity,
+                  child: Padding(
+                    padding: EdgeInsets.all(15.w),
+                    child: Column(
+                      children: [
+                        StatsOverviewWidgets(),
+                        verticalSpacing(30),
+                        const NewJobRequests(),
+                      ],
+                    ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),

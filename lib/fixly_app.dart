@@ -1,4 +1,7 @@
+import 'package:fixly/core/constants/app_theme.dart';
 import 'package:fixly/core/routing/routers/customer_router_config.dart';
+import 'package:fixly/core/routing/routers/technician_router.dart';
+import 'package:fixly/features/onboarding/ui/who_are_you_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -12,15 +15,14 @@ class FixlyApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (context, child) {
-        return MaterialApp.router(
-          routerConfig: CustomerRouterConfig.router,
+        return MaterialApp(
           debugShowCheckedModeBanner: false,
-          theme: ThemeData(brightness: Brightness.light),
-          darkTheme: ThemeData(brightness: Brightness.dark),
+          theme: AppTheme.light,
+          darkTheme: AppTheme.dark,
           themeMode: ThemeMode.dark,
+          home: const WhoAreYouScreen(),
         );
       },
     );
   }
 }
-
