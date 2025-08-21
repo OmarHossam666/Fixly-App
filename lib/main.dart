@@ -7,4 +7,3 @@ Future<void> main() async {
   await ScreenUtil.ensureScreenSize();
   runApp(const FixlyApp());
 }
-

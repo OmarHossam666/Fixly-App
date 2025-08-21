@@ -25,7 +25,6 @@ class _FixlyAppState extends State<FixlyApp> {
       splitScreenMode: true,
       builder: (context, child) {
         if (selectedRouter == null) {
-          
           // ✅ No router chosen yet → show who are you screen
           return MaterialApp(
             debugShowCheckedModeBanner: false,
