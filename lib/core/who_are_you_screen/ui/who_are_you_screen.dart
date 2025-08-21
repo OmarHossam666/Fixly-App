@@ -2,8 +2,9 @@ import 'package:fixly/core/constants/app_colors.dart';
 import 'package:fixly/core/constants/app_styles.dart';
 import 'package:fixly/core/helpers/spacing.dart';
 import 'package:fixly/core/routing/models/router_choice.dart';
+import 'package:fixly/core/who_are_you_screen/ui/widgets/i_need_services_feature_items.dart';
+import 'package:fixly/core/who_are_you_screen/ui/widgets/i_provide_services_feature_items.dart';
 import 'package:fixly/core/widgets/surface_dark.dart';
-import 'package:fixly/core/who_are_you_screen/ui/widgets/feature_item.dart';
 import 'package:fixly/features/customer/authentication/ui/widgets/logo_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -18,6 +19,8 @@ class WhoAreYouScreen extends StatefulWidget {
 
 class _WhoAreYouScreenState extends State<WhoAreYouScreen> {
   RouterChoice routerChoice = RouterChoice.none;
+  bool isTechnician = false;
+  bool isCustomer = false;
 
   @override
   Widget build(BuildContext context) {
@@ -29,27 +32,6 @@ class _WhoAreYouScreenState extends State<WhoAreYouScreen> {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                // Container(
-                //   width: 80.w,
-                //   height: 80.h,
-                //   decoration: BoxDecoration(
-                //     gradient: LinearGradient(
-                //       begin: Alignment.topLeft,
-                //       end: Alignment.bottomRight,
-                //       colors: [
-                //         context.colors.primary.withAlpha(140),
-                //         context.colors.accent.withAlpha(140),
-                //       ],
-                //     ),
-                //     borderRadius: BorderRadius.circular(40.r),
-                //   ),
-                //   child: Icon(
-                //     Icons.build_rounded,
-                //     color: Colors.white,
-                //     size: 40.r,
-                //   ),
-
-                // ),
                 const LogoWidget(),
 
                 // Welcome title
@@ -59,7 +41,7 @@ class _WhoAreYouScreenState extends State<WhoAreYouScreen> {
                   textAlign: TextAlign.center,
                 ),
 
-                verticalSpacing(30),
+                verticalSpacing(25),
 
                 // Subtitle
                 Text(
@@ -70,28 +52,31 @@ class _WhoAreYouScreenState extends State<WhoAreYouScreen> {
                   textAlign: TextAlign.center,
                 ),
 
-                verticalSpacing(20),
+                verticalSpacing(10),
 
-                // "I need services" card
                 InkWell(
-                  splashColor: Colors.transparent, // remove ripple
-                  highlightColor: Colors.transparent, // remove press color
+                  splashColor: Colors.transparent,
+                  highlightColor: Colors.transparent,
                   hoverColor: Colors.transparent,
                   overlayColor: WidgetStateProperty.all(Colors.transparent),
                   splashFactory: NoSplash.splashFactory,
-
                   onTap: () {
                     setState(() {
                       routerChoice = RouterChoice.customer;
+                      isTechnician = false;
+                      isCustomer = true;
                     });
                   },
-
                   child: SurfaceDark(
+                    borderWidth: isCustomer ? 2.h : 1.h,
+                    borderColor: isCustomer ? context.colors.accent : null,
                     borderColorAll: true,
                     borderRadiusAll: true,
-                    allRadius: 16,
-                    padding: const EdgeInsets.all(20),
-                    margin: const EdgeInsets.only(bottom: 24),
+                    allRadius: 10,
+                    padding: EdgeInsets.symmetric(
+                      horizontal: 20.w,
+                      vertical: 20.h,
+                    ),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -133,76 +118,37 @@ class _WhoAreYouScreenState extends State<WhoAreYouScreen> {
                         verticalSpacing(20),
 
                         // Features grid
-                        Row(
-                          children: [
-                            Expanded(
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  FeatureItem(
-                                    icon: Icons.verified,
-                                    text: 'Verified Technicians',
-                                    context: context,
-                                    color: context.colors.facebook,
-                                  ),
-                                  verticalSpacing(12),
-                                  FeatureItem(
-                                    icon: Icons.security,
-                                    text: 'Secure Payments',
-                                    context: context,
-                                    color: context.colors.facebook,
-                                  ),
-                                ],
-                              ),
-                            ),
-                            horizontalSpacing(10),
-                            Expanded(
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  FeatureItem(
-                                    icon: Icons.track_changes,
-                                    text: 'Real-time Tracking',
-                                    context: context,
-                                    color: context.colors.facebook,
-                                  ),
-                                  verticalSpacing(12),
-                                  FeatureItem(
-                                    icon: Icons.verified_user,
-                                    text: 'Quality Guarantee',
-                                    context: context,
-                                    color: context.colors.facebook,
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
+                        const INeedServicesFeatureItems(),
                       ],
                     ),
                   ),
                 ),
-
+                verticalSpacing(15),
                 // "I provide services" card
                 InkWell(
-                  splashColor: Colors.transparent, // remove ripple
-                  highlightColor: Colors.transparent, // remove press color
+                  splashColor: Colors.transparent,
+                  highlightColor: Colors.transparent,
                   hoverColor: Colors.transparent,
                   overlayColor: WidgetStateProperty.all(Colors.transparent),
                   splashFactory: NoSplash.splashFactory,
-                  
-
                   onTap: () {
                     setState(() {
                       routerChoice = RouterChoice.technician;
+                      isTechnician = true;
+                      isCustomer = false;
                     });
                   },
                   child: SurfaceDark(
+                    borderColor: isTechnician ? context.colors.accent : null,
                     borderColorAll: true,
                     borderRadiusAll: true,
-                    allRadius: 16,
-                    padding: EdgeInsets.all(20.r),
-                    margin: EdgeInsets.only(bottom: 48.h),
+                    allRadius: 10,
+                    borderWidth: isTechnician ? 2.h : 1.h,
+
+                    padding: EdgeInsets.symmetric(
+                      horizontal: 20.w,
+                      vertical: 20.h,
+                    ),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -244,60 +190,16 @@ class _WhoAreYouScreenState extends State<WhoAreYouScreen> {
                         verticalSpacing(20),
 
                         // Features grid
-                        Row(
-                          children: [
-                            Expanded(
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  FeatureItem(
-                                    icon: Icons.schedule,
-                                    text: 'Flexible scheduling',
-                                    context: context,
-                                    color: context.colors.accent,
-                                  ),
-                                  verticalSpacing(12),
-                                  FeatureItem(
-                                    icon: Icons.star_rate,
-                                    text: 'Customer reviews',
-                                    color: context.colors.accent,
-                                    context: context,
-                                  ),
-                                ],
-                              ),
-                            ),
-                            horizontalSpacing(20),
-                            Expanded(
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  FeatureItem(
-                                    icon: Icons.flash_on,
-                                    text: 'Instant payments',
-                                    context: context,
-                                    color: context.colors.accent,
-                                  ),
-                                  verticalSpacing(12),
-                                  FeatureItem(
-                                    icon: Icons.business_center,
-                                    text: 'Business tools',
-                                    context: context,
-                                    color: context.colors.accent,
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
+                        const IProvideServicesFeatureItems(),
                       ],
                     ),
                   ),
                 ),
+                verticalSpacing(20),
 
                 // Continue button
                 SizedBox(
-                  width: double.infinity,
-                  height: 56.h,
+                  height: 60.h,
                   child: ElevatedButton(
                     onPressed: () {
                       if (routerChoice != RouterChoice.none &&
@@ -309,6 +211,7 @@ class _WhoAreYouScreenState extends State<WhoAreYouScreen> {
                       backgroundColor: context.colors.primary,
                       foregroundColor: Colors.white,
                       elevation: 0,
+
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(16.r),
                       ),
