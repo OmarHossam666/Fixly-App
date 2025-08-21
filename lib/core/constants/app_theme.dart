@@ -8,11 +8,12 @@ class AppTheme {
   static final dark = darkTheme;
 }
 
-
-
-
 final lightTheme = ThemeData(
+  splashColor: Colors.transparent,
+  highlightColor: Colors.transparent,
+  hoverColor: Colors.transparent,
   brightness: Brightness.light,
+  splashFactory: NoSplash.splashFactory,
   scaffoldBackgroundColor: AppColors.lightColors.background,
   appBarTheme: AppBarTheme(
     backgroundColor: AppColors.lightColors.background,
@@ -28,7 +29,11 @@ final lightTheme = ThemeData(
 );
 
 final darkTheme = ThemeData(
+  splashColor: Colors.transparent,
+  highlightColor: Colors.transparent,
+  hoverColor: Colors.transparent,
   brightness: Brightness.dark,
+  splashFactory: NoSplash.splashFactory,
   scaffoldBackgroundColor: AppColors.darkColors.background,
   appBarTheme: AppBarTheme(
     backgroundColor: AppColors.darkColors.background,

@@ -1,13 +1,13 @@
 import 'package:fixly/core/constants/app_colors.dart';
 import 'package:fixly/core/constants/app_styles.dart';
-import 'package:fixly/core/routing/routes/customer_routes.dart';
-import 'package:fixly/features/customer/authentication/ui/widgets/auth_toggle_widget.dart';
-import 'package:fixly/features/customer/authentication/ui/widgets/logo_widget.dart';
-import 'package:fixly/features/customer/authentication/ui/widgets/phone_input_widget.dart';
-import 'package:fixly/features/customer/authentication/ui/widgets/primary_button_widget.dart';
-import 'package:fixly/features/customer/authentication/ui/widgets/skip_button_widget.dart';
-import 'package:fixly/features/customer/authentication/ui/widgets/social_login_button.dart';
-import 'package:fixly/features/customer/authentication/ui/widgets/welcome_text_widget.dart';
+import 'package:fixly/core/routing/routes/shared_routes.dart';
+import 'package:fixly/features/authentication/ui/widgets/auth_toggle_widget.dart';
+import 'package:fixly/features/authentication/ui/widgets/logo_widget.dart';
+import 'package:fixly/features/authentication/ui/widgets/phone_input_widget.dart';
+import 'package:fixly/features/authentication/ui/widgets/primary_button_widget.dart';
+import 'package:fixly/features/authentication/ui/widgets/skip_button_widget.dart';
+import 'package:fixly/features/authentication/ui/widgets/social_login_button.dart';
+import 'package:fixly/features/authentication/ui/widgets/welcome_text_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:go_router/go_router.dart';
@@ -196,7 +196,7 @@ class _AuthenticationScreenState extends State<AuthenticationScreen> {
 
   void _handleSkip() {
     // Navigate to main app
-    context.pushReplacement(CustomerRoutes.mainScreen);
+    context.pushReplacement(SharedRoutes.navigationScreen);
   }
 
   void _showComingSoonDialog(String provider) {
@@ -246,7 +246,7 @@ class _AuthenticationScreenState extends State<AuthenticationScreen> {
             ),
             onPressed: () {
               context.pop();
-              context.pushReplacement(CustomerRoutes.mainScreen);
+              context.pushReplacement(SharedRoutes.navigationScreen);
             },
             child: Text(
               'Continue to App',

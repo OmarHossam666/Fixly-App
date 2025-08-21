@@ -1,8 +1,8 @@
 import 'package:fixly/core/constants/app_theme.dart';
 import 'package:fixly/core/routing/models/router_choice.dart';
 import 'package:fixly/core/routing/routers/customer_router_config.dart';
-import 'package:fixly/core/routing/routers/technician_router.dart';
-import 'package:fixly/core/who_are_you_screen/ui/who_are_you_screen.dart';
+import 'package:fixly/core/routing/routers/technician_router_config.dart';
+import 'package:fixly/features/who_are_you/ui/who_are_you_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
@@ -37,7 +37,7 @@ class _FixlyAppState extends State<FixlyApp> {
                   selectedRouter = choice == RouterChoice.customer
                       ? CustomerRouterConfig.router
                       : choice == RouterChoice.technician
-                      ? TechnicianRouter.router
+                      ? TechnicianRouterConfig.router
                       : null;
                 });
               },

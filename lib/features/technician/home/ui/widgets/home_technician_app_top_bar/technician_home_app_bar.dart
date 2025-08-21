@@ -16,7 +16,7 @@ class TechnicianHomeAppBar extends StatelessWidget {
       borderColorBottom: true,
       height: 165.h,
       child: Padding(
-        padding: const EdgeInsets.all(16),
+        padding:  EdgeInsets.symmetric(horizontal: 16.w, vertical: 16.h),
         child: Column(
           children: [
             Row(

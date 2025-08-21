@@ -1,14 +1,14 @@
 import 'package:fixly/core/constants/app_assets.dart';
-import 'package:fixly/features/customer/onboarding/models/onboarding_data_model.dart';
+import 'package:fixly/features/onboarding/models/onboarding_data_model.dart';
 
-class OnboardingDataList {
+class CustomerOnboardingDataList {
   static const List<OnboardingData> onboardingItems = [
     OnboardingData(
       id: 1,
       title: 'A Technician You Can Trust...',
       subtitle: 'With Peace of Mind.',
       description: 'Verified professionals with Fixly ID cards ensure your home repairs are handled by trusted experts.',
-      lottieFilePath: AppAssets.customerOnboardingScreen1,
+      lottieFilePath: AppAssets.technicianOnboardingScreen1,
     ),
     OnboardingData(
       id: 2,

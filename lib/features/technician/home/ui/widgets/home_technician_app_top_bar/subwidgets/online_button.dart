@@ -24,7 +24,7 @@ class _OnlineButtonState extends State<OnlineButton> {
         style: ElevatedButton.styleFrom(
           backgroundColor: AppColors.darkColors.primaryButton,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(15),
+            borderRadius: BorderRadius.circular(15.r),
           ),
         ),
         child: Row(

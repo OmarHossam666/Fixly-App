@@ -1,5 +1,6 @@
 import 'package:fixly/core/constants/app_colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class SurfaceDark extends StatelessWidget {
   final Widget child;
@@ -15,6 +16,8 @@ class SurfaceDark extends StatelessWidget {
   final double? topRadius;
   final double? bottomRadius;
 
+  final double? borderWidth;
+  final Color? borderColor;
   final bool borderColorAll;
   final bool borderColorTop;
   final bool borderColorBottom;
@@ -41,6 +44,7 @@ class SurfaceDark extends StatelessWidget {
     this.topRadius,
     this.bottomRadius,
 
+    this.borderColor,
     this.borderColorAll = false,
     this.borderColorTop = false,
     this.borderColorBottom = false,
@@ -48,12 +52,16 @@ class SurfaceDark extends StatelessWidget {
     this.borderColorRight = false,
     this.padding,
     this.margin,
-    this.alignment, this.boxShadow,
+    this.alignment,
+    this.boxShadow,
+    this.borderWidth,
+    
   });
 
   @override
   Widget build(BuildContext context) {
     return Container(
+     
       alignment: alignment,
       height: height,
       width: width,
@@ -64,32 +72,48 @@ class SurfaceDark extends StatelessWidget {
         borderRadius: borderRadiusAll
             ? BorderRadius.circular(allRadius)
             : BorderRadius.only(
-                topLeft: Radius.circular(topLeftRadius ?? topRadius ?? 0),
-                topRight: Radius.circular(topRightRadius ?? topRadius ?? 0),
+                topLeft: Radius.circular(topLeftRadius?.r ?? topRadius?.r ?? 0),
+                topRight: Radius.circular(topRightRadius?.r ?? topRadius?.r ?? 0),
                 bottomLeft: Radius.circular(
-                  bottomLeftRadius ?? bottomRadius ?? 0,
+                  bottomLeftRadius?.r ?? bottomRadius?.r ?? 0,
                 ),
                 bottomRight: Radius.circular(
-                  bottomRightRadius ?? bottomRadius ?? 0,
+                  bottomRightRadius?.r ?? bottomRadius?.r ?? 0,
                 ),
               ),
         border: borderColorAll
-            ? Border.all(color: AppColors.darkColors.border)
+            ? Border.all(
+                width: borderWidth?.w ?? 1.0.w,
+                color: borderColor ?? context.colors.border,
+              )
             : Border(
                 top: borderColorTop
-                    ? BorderSide(color: AppColors.darkColors.border)
+                    ? BorderSide(
+                        color: borderColor ?? context.colors.border,
+                        width: borderWidth?.w ?? 1.0.w,
+                      )
                     : BorderSide.none,
                 bottom: borderColorBottom
-                    ? BorderSide(color: AppColors.darkColors.border)
+                    ? BorderSide(
+                        color: borderColor ?? context.colors.border,
+                        width: borderWidth?.w ?? 1.0.w,
+                      )
                     : BorderSide.none,
                 left: borderColorLeft
-                    ? BorderSide(color: AppColors.darkColors.border)
+                    ? BorderSide(
+                        color: borderColor ?? context.colors.border,
+                        width: borderWidth?.w ?? 1.0.w,
+                      )
                     : BorderSide.none,
                 right: borderColorRight
-                    ? BorderSide(color: AppColors.darkColors.border)
+                    ? BorderSide(
+                        color: borderColor ?? context.colors.border,
+                        width: borderWidth?.w ?? 1.0.w,
+                      )
                     : BorderSide.none,
               ),
-              boxShadow: boxShadow,
+
+        boxShadow: boxShadow,
       ),
       child: child,
     );

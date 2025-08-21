@@ -1,23 +1,23 @@
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:fixly/core/constants/app_colors.dart';
 import 'package:fixly/core/routing/routes/customer_routes.dart';
-import 'package:fixly/features/customer/onboarding/data/onboarding_data.dart';
-import 'package:fixly/features/customer/onboarding/ui/widgets/next_button.dart';
-import 'package:fixly/features/customer/onboarding/ui/widgets/onboarding_page_widget.dart';
-import 'package:fixly/features/customer/onboarding/ui/widgets/skip_button.dart';
+import 'package:fixly/features/onboarding/data/customer_onboarding_data.dart';
+import 'package:fixly/features/onboarding/ui/widgets/next_button.dart';
+import 'package:fixly/features/onboarding/ui/widgets/onboarding_page_widget.dart';
+import 'package:fixly/features/onboarding/ui/widgets/skip_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 
-class OnboardingScreen extends StatefulWidget {
-  const OnboardingScreen({super.key});
+class CustomerOnboardingScreen extends StatefulWidget {
+  const CustomerOnboardingScreen({super.key});
 
   @override
-  State<OnboardingScreen> createState() => _OnboardingScreenState();
+  State<CustomerOnboardingScreen> createState() => _CustomerOnboardingScreenState();
 }
 
-class _OnboardingScreenState extends State<OnboardingScreen> {
+class _CustomerOnboardingScreenState extends State<CustomerOnboardingScreen> {
   final PageController _pageController = PageController();
   int _currentIndex = 0;
 
@@ -28,7 +28,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   }
 
   void _handleNext() {
-    if (_currentIndex < OnboardingDataList.onboardingItems.length - 1) {
+    if (_currentIndex < CustomerOnboardingDataList.onboardingItems.length - 1) {
       _pageController.nextPage(
         duration: const Duration(milliseconds: 300),
         curve: Curves.easeInOut,
@@ -80,10 +80,10 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               child: PageView.builder(
                 controller: _pageController,
                 onPageChanged: _onPageChanged,
-                itemCount: OnboardingDataList.onboardingItems.length,
+                itemCount: CustomerOnboardingDataList.onboardingItems.length,
                 itemBuilder: (context, index) {
                   return OnboardingPageWidget(
-                    onboardingData: OnboardingDataList.onboardingItems[index],
+                    onboardingData: CustomerOnboardingDataList.onboardingItems[index],
                   );
                 },
               ),
@@ -93,7 +93,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               child: Column(
                 children: [
                   DotsIndicator(
-                    dotsCount: OnboardingDataList.onboardingItems.length,
+                    dotsCount: CustomerOnboardingDataList.onboardingItems.length,
                     position: _currentIndex.toDouble(),
                     animate: true,
                     decorator: DotsDecorator(
@@ -110,7 +110,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     onPressed: _handleNext,
                     isLastPage:
                         _currentIndex ==
-                        OnboardingDataList.onboardingItems.length - 1,
+                        CustomerOnboardingDataList.onboardingItems.length - 1,
                   ),
                 ],
               ),
