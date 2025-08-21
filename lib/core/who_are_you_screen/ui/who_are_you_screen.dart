@@ -2,7 +2,8 @@ import 'package:fixly/core/constants/app_colors.dart';
 import 'package:fixly/core/constants/app_styles.dart';
 import 'package:fixly/core/helpers/spacing.dart';
 import 'package:fixly/core/widgets/surface_dark.dart';
-import 'package:fixly/features/onboarding/ui/widgets/feature_item.dart';
+import 'package:fixly/core/who_are_you_screen/ui/widgets/feature_item.dart';
+import 'package:fixly/features/customer/authentication/ui/widgets/logo_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -15,31 +16,31 @@ class WhoAreYouScreen extends StatelessWidget {
       backgroundColor: context.colors.background,
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.all(16),
+          padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 24.h),
           child: SingleChildScrollView(
             child: Column(
               children: [
-                Container(
-                  width: 80,
-                  height: 80,
-                  decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                      begin: Alignment.topLeft,
-                      end: Alignment.bottomRight,
-                      colors: [
-                        context.colors.primary.withAlpha(140),
-                        context.colors.accent.withAlpha(140),
-                      ],
-                    ),
-                    borderRadius: BorderRadius.circular(40.r),
-                  ),
-                  child: Icon(
-                    Icons.build_rounded,
-                    color: Colors.white,
-                    size: 40,
-                  ),
-                ),
-
+                // Container(
+                //   width: 80.w,
+                //   height: 80.h,
+                //   decoration: BoxDecoration(
+                //     gradient: LinearGradient(
+                //       begin: Alignment.topLeft,
+                //       end: Alignment.bottomRight,
+                //       colors: [
+                //         context.colors.primary.withAlpha(140),
+                //         context.colors.accent.withAlpha(140),
+                //       ],
+                //     ),
+                //     borderRadius: BorderRadius.circular(40.r),
+                //   ),
+                //   child: Icon(
+                //     Icons.build_rounded,
+                //     color: Colors.white,
+                //     size: 40.r,
+                //   ),
+                // ),
+                const LogoWidget(),
                 verticalSpacing(15),
 
                 // Welcome title
@@ -67,24 +68,24 @@ class WhoAreYouScreen extends StatelessWidget {
                   borderColorAll: true,
                   borderRadiusAll: true,
                   allRadius: 16,
-                  padding: EdgeInsets.all(20),
-                  margin: EdgeInsets.only(bottom: 24),
+                  padding: const EdgeInsets.all(20),
+                  margin: const EdgeInsets.only(bottom: 24),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Row(
                         children: [
                           Container(
-                            width: 48,
-                            height: 48,
+                            width: 48.w,
+                            height: 48.w,
                             decoration: BoxDecoration(
                               color: context.colors.primary,
-                              borderRadius: BorderRadius.circular(24),
+                              borderRadius: BorderRadius.circular(24.r),
                             ),
                             child: Icon(
                               Icons.person,
                               color: Colors.white,
-                              size: 24,
+                              size: 24.r,
                             ),
                           ),
                           horizontalSpacing(16),
@@ -164,24 +165,24 @@ class WhoAreYouScreen extends StatelessWidget {
                   borderColorAll: true,
                   borderRadiusAll: true,
                   allRadius: 16,
-                  padding: EdgeInsets.all(20),
-                  margin: EdgeInsets.only(bottom: 48),
+                  padding: EdgeInsets.all(20.r),
+                  margin:  EdgeInsets.only(bottom: 48.h),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Row(
                         children: [
                           Container(
-                            width: 48,
-                            height: 48,
+                            width: 48.w,
+                            height: 48.w,
                             decoration: BoxDecoration(
                               color: context.colors.accent,
-                              borderRadius: BorderRadius.circular(24),
+                              borderRadius: BorderRadius.circular(24.r),
                             ),
                             child: Icon(
                               Icons.build,
                               color: context.colors.textOnAccent,
-                              size: 24,
+                              size: 24.r,
                             ),
                           ),
                           horizontalSpacing(16),
@@ -259,7 +260,7 @@ class WhoAreYouScreen extends StatelessWidget {
                 // Continue button
                 SizedBox(
                   width: double.infinity,
-                  height: 56,
+                  height: 56.h,
                   child: ElevatedButton(
                     onPressed: () {},
                     style: ElevatedButton.styleFrom(
@@ -267,7 +268,7 @@ class WhoAreYouScreen extends StatelessWidget {
                       foregroundColor: Colors.white,
                       elevation: 0,
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(16),
+                        borderRadius: BorderRadius.circular(16.r),
                       ),
                     ),
                     child: Row(
@@ -281,7 +282,7 @@ class WhoAreYouScreen extends StatelessWidget {
                         Icon(
                           Icons.arrow_forward,
                           color: Colors.white,
-                          size: 20,
+                          size: 20.r,
                         ),
                       ],
                     ),

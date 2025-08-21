@@ -24,13 +24,13 @@ class LogoWidget extends StatelessWidget {
               // Main Settings Icon
               Icon(
                 Icons.settings,
-                size: 50.sp,
+                size: 50.r,
                 color: context.colors.background,
               ),
               // Speed/Location Icon Overlay
               Positioned(
-                bottom: 8,
-                right: 8,
+                bottom: 8.h,
+                right: 8.w,
                 child: Container(
                   width: 28.w,
                   height: 28.h,
@@ -48,26 +48,12 @@ class LogoWidget extends StatelessWidget {
             ],
           ),
         ),
-        SizedBox(height: 24.h),
-
         // Fixly Brand Text
         Text(
           'Fixly',
           style: context.textStyles.headline.copyWith(
             fontSize: 36.sp,
             letterSpacing: -1,
-          ),
-        ),
-
-        SizedBox(height: 8.h),
-
-        // Arabic Text
-        Text(
-          'صلّحلي',
-          style: context.textStyles.headline.copyWith(
-            fontSize: 24.sp,
-            fontWeight: FontWeight.bold,
-            color: context.colors.accent,
           ),
         ),
       ],
