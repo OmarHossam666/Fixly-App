@@ -1,5 +1,6 @@
 import 'package:fixly/core/constants/app_colors.dart';
 import 'package:fixly/core/constants/app_styles.dart';
+import 'package:fixly/core/routing/routes/customer_routes.dart';
 import 'package:fixly/features/customer/booking_confirmation/data/booking_confirmation_data.dart';
 import 'package:fixly/features/customer/booking_confirmation/models/booking_confirmation_model.dart';
 import 'package:fixly/features/customer/booking_confirmation/ui/widgets/booking_action_buttons.dart';
@@ -212,6 +213,7 @@ class _BookingConfirmationScreenState extends State<BookingConfirmationScreen> {
                   backgroundColor: context.colors.success,
                 ),
               );
+              context.pushReplacement(CustomerRoutes.serviceInProgressScreen);
             },
             style: ElevatedButton.styleFrom(
               backgroundColor: context.colors.success,
