@@ -8,7 +8,7 @@ class CustomerOnboardingDataList {
       title: 'A Technician You Can Trust...',
       subtitle: 'With Peace of Mind.',
       description: 'Verified professionals with Fixly ID cards ensure your home repairs are handled by trusted experts.',
-      lottieFilePath: AppAssets.customerOnboardingScreen1,
+      lottieFilePath: AppAssets.technicianOnboardingScreen1,
     ),
     OnboardingData(
       id: 2,

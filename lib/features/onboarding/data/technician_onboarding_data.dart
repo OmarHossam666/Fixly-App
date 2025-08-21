@@ -8,21 +8,21 @@ class TechnicianOnboardingDataList {
       title: 'Boost Your Career...',
       subtitle: 'With Every Job.',
       description: 'Join Fixly to access a steady flow of customers who need your expertise, right in your area.',
-      lottieFilePath: AppAssets.customerOnboardingScreen1,
+      lottieFilePath: AppAssets.technicianOnboardingScreen1,
     ),
     OnboardingData(
       id: 2,
       title: 'Work on Your Terms...',
       subtitle: 'Anytime, Anywhere.',
       description: 'Choose the jobs that fit your schedule. Flexibility and freedom while growing your income.',
-      lottieFilePath: AppAssets.customerOnboardingScreen2,
+      lottieFilePath: AppAssets.technicianOnboardingScreen2,
     ),
     OnboardingData(
       id: 3,
       title: 'Secure Payments...',
       subtitle: 'Always on Time.',
       description: 'Get paid quickly and securely for every completed task, with no delays or hidden fees.',
-      lottieFilePath: AppAssets.customerOnboardingScreen3,
+      lottieFilePath: AppAssets.technicianOnboardingScreen3,
     ),
   ];
 }
