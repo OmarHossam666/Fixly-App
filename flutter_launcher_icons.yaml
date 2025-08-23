@@ -1,0 +1,8 @@
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/fixly_splash.png"
+
+
+  min_sdk_android: 21
+  remove_alpha_ios: true
