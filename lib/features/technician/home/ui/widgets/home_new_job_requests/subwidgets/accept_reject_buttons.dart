@@ -11,20 +11,22 @@ class AcceptRejectButtons extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        CustomElevatedButton(
-          color: context.colors.lightRed,
-          text: "Reject",
-          width: 137,
-          height: 40,
-          radius: 10,
+        Expanded(
+          child: CustomElevatedButton(
+            color: context.colors.lightRed,
+            text: "Reject",
+            height: 40,
+            radius: 10,
+          ),
         ),
-        horizontalSpacing(10),
-        CustomElevatedButton(
-          color: context.colors.success,
-          text: 'Accept',
-          width: 137,
-          height: 40,
-          radius: 10,
+        horizontalSpacing(15),
+        Expanded(
+          child: CustomElevatedButton(
+            color: context.colors.success,
+            text: 'Accept',
+            height: 40,
+            radius: 10,
+          ),
         ),
       ],
     );

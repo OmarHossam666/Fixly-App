@@ -72,7 +72,7 @@ class _LightTextStyles implements AppTextStyles {
   @override
   TextStyle get statisticsWidgetText => TextStyle(
     fontFamily: AppStyles._fontFamily,
-    fontSize: 28,
+    fontSize: 28.sp,
     fontWeight: FontWeight.w900,
     color: _colors.text,
   );
@@ -80,7 +80,7 @@ class _LightTextStyles implements AppTextStyles {
   @override
   TextStyle get bold14Text => TextStyle(
     fontFamily: AppStyles._fontFamily,
-    fontSize: 14,
+    fontSize: 14.sp,
     fontWeight: FontWeight.bold,
     color: _colors.textOnAccent,
   );
@@ -95,7 +95,7 @@ class _LightTextStyles implements AppTextStyles {
 
   @override
   TextStyle get green16Bold => TextStyle(
-    fontSize: 16,
+    fontSize: 16.sp,
     fontWeight: FontWeight.bold,
     color: _colors.success,
   );
@@ -161,7 +161,7 @@ class _LightTextStyles implements AppTextStyles {
   @override
   TextStyle get onlineButton => TextStyle(
     fontFamily: AppStyles._fontFamily,
-    fontSize: 18,
+    fontSize: 18.sp,
     fontWeight: FontWeight.w800,
     color: _colors.primaryButtonText,
   );
@@ -207,7 +207,7 @@ class _DarkTextStyles implements AppTextStyles {
   @override
   TextStyle get statisticsWidgetText => TextStyle(
     fontFamily: AppStyles._fontFamily,
-    fontSize: 28,
+    fontSize: 28.sp,
     fontWeight: FontWeight.bold,
     color: _colors.text,
   );
@@ -215,7 +215,7 @@ class _DarkTextStyles implements AppTextStyles {
   @override
   TextStyle get bold14Text => TextStyle(
     fontFamily: AppStyles._fontFamily,
-    fontSize: 14,
+    fontSize: 14.sp,
     fontWeight: FontWeight.bold,
     color: _colors.textOnAccent,
   );
@@ -230,7 +230,7 @@ class _DarkTextStyles implements AppTextStyles {
 
   @override
   TextStyle get green16Bold => TextStyle(
-    fontSize: 16,
+    fontSize: 16.sp,
     fontWeight: FontWeight.bold,
     color: _colors.success,
   );
@@ -296,7 +296,7 @@ class _DarkTextStyles implements AppTextStyles {
   @override
   TextStyle get onlineButton => TextStyle(
     fontFamily: AppStyles._fontFamily,
-    fontSize: 18,
+    fontSize: 18.sp,
     fontWeight: FontWeight.w900,
     color: _colors.primaryButtonText,
   );

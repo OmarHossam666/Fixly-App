@@ -3,7 +3,7 @@ import 'package:fixly/core/helpers/spacing.dart';
 import 'package:fixly/core/widgets/surface_dark.dart';
 import 'package:fixly/features/technician/home/ui/widgets/home_technician_app_top_bar/subwidgets/logo_and_title.dart';
 import 'package:fixly/features/technician/home/ui/widgets/home_technician_app_top_bar/subwidgets/notification_with_badge.dart';
-import 'package:fixly/features/technician/home/ui/widgets/home_technician_app_top_bar/subwidgets/online_button.dart';
+import 'package:fixly/features/technician/home/ui/widgets/home_technician_app_top_bar/subwidgets/status_online_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -16,7 +16,7 @@ class TechnicianHomeAppBar extends StatelessWidget {
       borderColorBottom: true,
       height: 165.h,
       child: Padding(
-        padding:  EdgeInsets.symmetric(horizontal: 16.w, vertical: 16.h),
+        padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 16.h),
         child: Column(
           children: [
             Row(
@@ -25,10 +25,8 @@ class TechnicianHomeAppBar extends StatelessWidget {
                 const LogoAndTitle(),
                 Row(
                   children: [
-                    IconButton(
-                      onPressed: () {},
-                      icon: const NotificationWithBadge(),
-                    ),
+                    const NotificationWithBadge(),
+
                     CircleAvatar(
                       backgroundColor: AppColors.darkColors.surfaceElevated,
                     ),
@@ -37,7 +35,7 @@ class TechnicianHomeAppBar extends StatelessWidget {
               ],
             ),
             verticalSpacing(15),
-            const OnlineButton(),
+            const StatusOnlineButton(),
           ],
         ),
       ),
