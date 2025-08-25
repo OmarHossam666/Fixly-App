@@ -72,13 +72,11 @@ Now analyze and respond to this message:
         .trim();
     try {
       final parsedJson = jsonDecode(cleanedContent);
-      print(parsedJson);
       return parsedJson;
     } catch (e) {
       throw Exception('Gemini did not return valid JSON: $e\n$cleanedContent');
     }
   } else {
-    print('Error ${response.statusCode}: ${response.body}');
     throw Exception('Failed to call Gemini');
   }
 }

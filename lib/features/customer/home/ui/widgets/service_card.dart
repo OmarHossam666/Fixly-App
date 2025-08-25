@@ -36,7 +36,7 @@ class ServiceCard extends StatelessWidget {
           decoration: BoxDecoration(
             color: surfaceColor,
             borderRadius: BorderRadius.circular(16.r),
-            border: Border.all(color: borderColor, width: 1.w),
+            border: Border.all(color: borderColor, width: 2.w),
           ),
           padding: EdgeInsets.all(16.r),
           child: Column(
@@ -53,7 +53,9 @@ class ServiceCard extends StatelessWidget {
                 child: Icon(service.icon, size: 28.sp, color: backgroundColor),
               ),
               SizedBox(height: 12.h),
-              FittedBox(child: Text(service.name, style: context.textStyles.cardTitle)),
+              FittedBox(
+                child: Text(service.name, style: context.textStyles.cardTitle),
+              ),
               SizedBox(height: 6.h),
               FittedBox(
                 child: Text(

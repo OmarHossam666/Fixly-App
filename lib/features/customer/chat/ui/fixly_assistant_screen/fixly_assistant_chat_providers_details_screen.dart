@@ -7,6 +7,6 @@ class FixlyAssistantChatProvidersDetailsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    return providersList!=null? Text(providersList?.map((provider) => provider['first_name'] as String).join(', ') ?? ''):SizedBox();
+    return providersList != null ? Text(providersList?.map((provider) => provider['first_name'] as String).join(', ') ?? ''): const SizedBox();
   }
 }
