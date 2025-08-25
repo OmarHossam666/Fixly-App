@@ -18,8 +18,8 @@ class NotificationWithBadge extends StatelessWidget {
               context: context,
               builder: (context) {
                 return AlertDialog(
-                  title: Text("Notifications"),
-                  content: Text("You don't have new notifications."),
+                  title: const Text("Notifications"),
+                  content: const Text("You don't have new notifications."),
                   actions: [
                     TextButton(
                       onPressed: () {
