@@ -8,6 +8,7 @@ class CustomElevatedButton extends StatelessWidget {
   final double? height;
   final double? width;
   final double? radius;
+  final TextStyle? textStyle;
   const CustomElevatedButton({
     super.key,
     required this.color,
@@ -15,6 +16,7 @@ class CustomElevatedButton extends StatelessWidget {
     this.height,
     this.width,
     this.radius,
+    this.textStyle,
   });
 
   @override
@@ -30,7 +32,7 @@ class CustomElevatedButton extends StatelessWidget {
             borderRadius: BorderRadius.circular(radius?.r ?? 15.r),
           ),
         ),
-        child: Text(text, style: context.textStyles.bold14Text),
+        child: Text(text, style: textStyle ?? context.textStyles.bold14Text),
       ),
     );
   }
