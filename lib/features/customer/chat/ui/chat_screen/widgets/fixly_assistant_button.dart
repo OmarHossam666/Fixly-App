@@ -35,16 +35,13 @@ class FixlyAssistantButton extends StatelessWidget {
                 children: [
                   Text(
                     "Fixly Assistant",
-                    style: context.textStyles.bodyTextBold.copyWith(
-                      fontSize: 17,
-                    ),
+                    style: context.textStyles.bodyTextBold,
                   ),
                   horizontalSpacing(4),
                   Text(
                     "Get quick diagnosis and step-by-step help",
                     style: context.textStyles.bodyTextSmall.copyWith(
                       color: context.colors.textOnAccent,
-                      fontSize: 12,
                     ),
                   ),
                 ],

@@ -15,10 +15,10 @@ class FixlyAssistantScreen extends StatefulWidget {
   const FixlyAssistantScreen({super.key});
 
   @override
-  _FixlyAssistantScreenState createState() => _FixlyAssistantScreenState();
+  FixlyAssistantScreenState createState() => FixlyAssistantScreenState();
 }
 
-class _FixlyAssistantScreenState extends State<FixlyAssistantScreen> {
+class FixlyAssistantScreenState extends State<FixlyAssistantScreen> {
   List<Map<String, String>> chatList = [
     {
       "content":

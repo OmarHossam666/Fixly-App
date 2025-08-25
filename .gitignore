@@ -44,3 +44,6 @@ app.*.map.json
 /android/app/profile
 /android/app/release
 fixly_mobile_app.jsx
+bookings.jsx
+chat.jsx
+profile.jsx

@@ -1,5 +1,6 @@
 import 'package:fixly/core/constants/app_colors.dart';
 import 'package:fixly/core/constants/app_styles.dart';
+import 'package:fixly/core/helpers/spacing.dart';
 import 'package:fixly/core/widgets/surface_dark.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -22,44 +23,47 @@ class RecentConversationSingleWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SurfaceDark(
-      borderRadiusAll: true,
-      allRadius: 15,
-      padding: EdgeInsets.all(12.r),
+    return Padding(
+      padding: EdgeInsets.only(bottom: 16.h),
+      child: SurfaceDark(
+        borderRadiusAll: true,
+        allRadius: 15,
+        padding: EdgeInsets.all(16.r),
 
-      child: IntrinsicHeight(
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Center(
-              child: CircleAvatar(
-                backgroundColor: circleColor,
-                child: Icon(icon, color: context.colors.background),
+        child: IntrinsicHeight(
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Center(
+                child: CircleAvatar(
+                  backgroundColor: circleColor,
+                  child: Icon(icon, color: context.colors.background),
+                ),
               ),
-            ),
 
-            const SizedBox(width: 12),
-            Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    title,
-                    style: context.textStyles.sectionHeader.copyWith(
-                      fontWeight: FontWeight.bold,
+              horizontalSpacing(12),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      title,
+                      style: context.textStyles.sectionHeader.copyWith(
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
-                  ),
-                  const SizedBox(height: 4),
-                  Text(subtitle, style: context.textStyles.bodyTextSmall),
-                ],
+                    verticalSpacing(4),
+                    Text(subtitle, style: context.textStyles.bodyTextSmall),
+                  ],
+                ),
               ),
-            ),
 
-            Text(
-              time,
-              style: context.textStyles.bodyTextSmall.copyWith(fontSize: 12),
-            ),
-          ],
+              Text(
+                time,
+                style: context.textStyles.bodyTextSmall.copyWith(fontSize: 12),
+              ),
+            ],
+          ),
         ),
       ),
     );
