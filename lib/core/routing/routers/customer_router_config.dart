@@ -2,6 +2,8 @@ import 'package:fixly/core/routing/routes/shared_routes.dart';
 import 'package:fixly/core/routing/routes/customer_routes.dart';
 import 'package:fixly/features/authentication/ui/authentication_screen.dart';
 import 'package:fixly/features/customer/booking_confirmation/ui/booking_confirmation_screen.dart';
+import 'package:fixly/features/customer/chat/ui/fixly_assistant_screen/fixly_assistant_chat_providers_details_screen.dart';
+import 'package:fixly/features/customer/chat/ui/fixly_assistant_screen/fixly_assistant_screen.dart';
 import 'package:fixly/features/customer/final_bill/ui/final_bill_screen.dart';
 import 'package:fixly/features/onboarding/ui/customer_onboarding_screen.dart';
 import 'package:fixly/features/customer/rating_and_review/ui/rating_and_review_screen.dart';
@@ -64,6 +66,19 @@ class CustomerRouterConfig {
         path: CustomerRoutes.receiptScreen,
         name: CustomerRoutes.receiptScreen.substring(1),
         builder: (context, state) => const ReceiptScreen(),
+      ),
+      GoRoute(
+        path: CustomerRoutes.fixlyAssistantScreen,
+        name: CustomerRoutes.fixlyAssistantScreen.substring(1),
+        builder: (context, state) =>  const FixlyAssistantScreen(),
+      ),
+        GoRoute(
+        path: CustomerRoutes.chatProvidersDetailsScreen,
+        name: CustomerRoutes.chatProvidersDetailsScreen.substring(1),
+        builder: (context, state) {
+          final providersList = state.extra as List<Map<String, dynamic>>?;
+          return FixlyAssistantChatProvidersDetailsScreen(providersList: providersList);
+        },
       ),
     ],
   );

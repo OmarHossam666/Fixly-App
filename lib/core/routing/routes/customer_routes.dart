@@ -9,4 +9,6 @@ class CustomerRoutes {
   static const String finalBillScreen = '/finalBillScreen';
   static const String ratingAndReviewScreen = '/ratingAndReviewScreen';
   static const String receiptScreen = '/receiptScreen';
+  static const String fixlyAssistantScreen = '/fixlyAssistantScreen';
+  static const String chatProvidersDetailsScreen = '/chatProvidersDetailsScreen';
 }
