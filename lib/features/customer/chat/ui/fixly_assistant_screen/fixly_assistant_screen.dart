@@ -1,5 +1,6 @@
 import 'package:fixly/core/constants/app_colors.dart';
 import 'package:fixly/core/constants/app_styles.dart';
+import 'package:fixly/core/helpers/spacing.dart';
 import 'package:fixly/core/network/gemini/gemini_api.dart';
 import 'package:fixly/core/network/gemini/service_providers_database.dart';
 import 'package:fixly/core/routing/routes/customer_routes.dart';
@@ -40,6 +41,7 @@ class FixlyAssistantScreenState extends State<FixlyAssistantScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: context.colors.background,
       appBar: fixlyAssistantAppBar(context),
       body: SafeArea(
         child: Column(
@@ -157,17 +159,14 @@ class FixlyAssistantScreenState extends State<FixlyAssistantScreen> {
                 ),
               ),
             ),
-            SurfaceDark(
-              height: 100.h,
-              borderColorTop: true,
-              padding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 12.h),
-              alignment: Alignment.center,
+            Padding(
+              padding: const EdgeInsets.only(left: 40, right: 40, bottom: 30),
               child: Row(
                 children: [
                   Expanded(
                     flex: 4,
                     child: SizedBox(
-                      height: 60.h,
+                      height: 50.h,
                       width: double.infinity,
                       child: TextField(
                         controller: _textController,
@@ -175,12 +174,16 @@ class FixlyAssistantScreenState extends State<FixlyAssistantScreen> {
                           fillColor: context.colors.surfaceSecondary,
                           filled: true,
                           focusedBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(15),
-                            borderSide: BorderSide.none,
+                            borderRadius: BorderRadius.circular(50.r),
+                            borderSide: BorderSide(
+                              color: context.colors.borderLight,
+                            ),
                           ),
                           border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(15),
-                            borderSide: BorderSide.none,
+                            borderRadius: BorderRadius.circular(50.r),
+                            borderSide: BorderSide(
+                              color: context.colors.borderLight,
+                            ),
                           ),
                         ),
                       ),
@@ -197,9 +200,13 @@ class FixlyAssistantScreenState extends State<FixlyAssistantScreen> {
                           });
                         }
                       },
-                      icon: Icon(
-                        Icons.send,
-                        color: context.colors.textOnAccent,
+                      icon: Transform.rotate(
+                        angle: -0.7, // in radians (~ -28.6°)
+
+                        child: Icon(
+                          Icons.send,
+                          color: context.colors.textOnAccent,
+                        ),
                       ),
                     ),
                   ),
