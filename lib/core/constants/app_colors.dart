@@ -32,6 +32,7 @@ class AppColors {
 
 /// Abstract base class for color schemes
 abstract class ColorScheme {
+  Color get black;
   // Brand Colors
   Color get primary;
   Color get accent;
@@ -76,7 +77,8 @@ abstract class ColorScheme {
 /// Light theme color implementation
 class _LightColors implements ColorScheme {
   const _LightColors();
-
+  @override
+  Color get black => const Color(0xFF000000);
   // Brand Colors
   @override
   Color get primary => const Color(0xFF1B365D); // Navy Blue
@@ -163,7 +165,8 @@ class _LightColors implements ColorScheme {
 /// Dark theme color implementation
 class _DarkColors implements ColorScheme {
   const _DarkColors();
-
+  @override
+  Color get black => const Color(0xFF000000);
   // Brand Colors
   @override
   Color get primary => const Color(0xFF2563EB); // Lighter blue

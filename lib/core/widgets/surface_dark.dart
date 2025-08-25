@@ -7,6 +7,7 @@ class SurfaceDark extends StatelessWidget {
   final double? height;
   final double? width;
   final double allRadius;
+  final Color? surfaceColor;
 
   final bool borderRadiusAll;
   final double? topLeftRadius;
@@ -55,25 +56,26 @@ class SurfaceDark extends StatelessWidget {
     this.alignment,
     this.boxShadow,
     this.borderWidth,
-    
+    this.surfaceColor,
   });
 
   @override
   Widget build(BuildContext context) {
     return Container(
-     
       alignment: alignment,
       height: height,
       width: width,
       margin: margin,
       padding: padding,
       decoration: BoxDecoration(
-        color: AppColors.darkColors.surface,
+        color: surfaceColor ?? AppColors.darkColors.surface,
         borderRadius: borderRadiusAll
             ? BorderRadius.circular(allRadius)
             : BorderRadius.only(
                 topLeft: Radius.circular(topLeftRadius?.r ?? topRadius?.r ?? 0),
-                topRight: Radius.circular(topRightRadius?.r ?? topRadius?.r ?? 0),
+                topRight: Radius.circular(
+                  topRightRadius?.r ?? topRadius?.r ?? 0,
+                ),
                 bottomLeft: Radius.circular(
                   bottomLeftRadius?.r ?? bottomRadius?.r ?? 0,
                 ),
