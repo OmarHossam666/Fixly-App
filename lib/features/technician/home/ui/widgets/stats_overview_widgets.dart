@@ -13,16 +13,18 @@ class StatsOverviewWidgets extends StatelessWidget {
     AppStrings.completedJobs,
     AppStrings.averageRating,
   ];
-  final List<String> tempoNumberStrings = const ["\$250", '3', '4.8'];
-  final List<Color> numberColors = [
-    AppColors.darkColors.success,
-    AppColors.darkColors.facebook,
-    AppColors.darkColors.warning,
-  ];
-  StatsOverviewWidgets({super.key});
+
+  const StatsOverviewWidgets({super.key});
 
   @override
   Widget build(BuildContext context) {
+    const List<String> tempoNumberStrings = ["\$250", '3', '4.8'];
+    final List<Color> numberColors = [
+      context.colors.success,
+      context.colors.facebook,
+      context.colors.warning,
+    ];
+
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: List.generate(statsStrings.length, (index) {
@@ -34,7 +36,7 @@ class StatsOverviewWidgets extends StatelessWidget {
           width: 105.w,
           margin: EdgeInsets.only(right: isLast ? 0 : 15.w),
           borderRadiusAll: true,
-          allRadius: 15,
+          allRadius: 15.r,
           child: Text.rich(
             TextSpan(
               children: [

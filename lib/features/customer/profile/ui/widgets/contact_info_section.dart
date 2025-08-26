@@ -1,5 +1,6 @@
 import 'package:fixly/core/constants/app_colors.dart';
 import 'package:fixly/core/constants/app_styles.dart';
+import 'package:fixly/core/helpers/spacing.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../models/profile_model.dart';
@@ -20,7 +21,7 @@ class ContactInfoSection extends StatelessWidget {
             'Contact Information',
             style: context.textStyles.sectionHeader.copyWith(fontSize: 18.sp),
           ),
-          SizedBox(height: 16.h),
+          verticalSpacing(16),
           Container(
             decoration: BoxDecoration(
               color: context.colors.surface,
@@ -91,7 +92,7 @@ class ContactInfoSection extends StatelessWidget {
             ),
             child: Icon(icon, size: 20.sp, color: context.colors.textOnAccent),
           ),
-          SizedBox(width: 16.w),
+          horizontalSpacing(16),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -103,7 +104,7 @@ class ContactInfoSection extends StatelessWidget {
                     color: context.colors.textSecondary,
                   ),
                 ),
-                SizedBox(height: 2.h),
+                verticalSpacing(2),
                 Text(
                   value,
                   style: context.textStyles.bodyTextBold.copyWith(

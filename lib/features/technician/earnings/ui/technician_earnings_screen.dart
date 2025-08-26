@@ -1,4 +1,5 @@
 import 'package:fixly/core/constants/app_styles.dart';
+import 'package:fixly/core/helpers/spacing.dart';
 import 'package:fixly/features/technician/earnings/ui/widgets/earning_history_job_card_list_view.dart';
 import 'package:fixly/features/technician/earnings/ui/widgets/total_balance_widget.dart';
 import 'package:flutter/material.dart';
@@ -6,10 +7,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class TechnicianEarningsScreen extends StatelessWidget {
   const TechnicianEarningsScreen({super.key});
-
-  // spacing helpers
-  Widget verticalSpacing(double height) => SizedBox(height: height);
-  Widget horizontalSpacing(double width) => SizedBox(width: width);
 
   @override
   Widget build(BuildContext context) {

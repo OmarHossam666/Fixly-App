@@ -29,7 +29,7 @@ class _StatusOnlineButtonState extends State<StatusOnlineButton> {
           },
           style: ElevatedButton.styleFrom(
             backgroundColor: isOnline
-                ? AppColors.darkColors.primaryButton
+                ? context.colors.primaryButton
                 : context.colors.secondaryButton,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(15.r),
@@ -43,11 +43,14 @@ class _StatusOnlineButtonState extends State<StatusOnlineButton> {
                     horizontalSpacing(7),
                     Text(
                       AppStrings.onlineReceivingJobs,
-                      style: AppStyles.dark.onlineButton,
+                      style: context.textStyles.onlineButton,
                     ),
                   ],
                 )
-              : Text(AppStrings.offline, style: AppStyles.dark.onlineButton),
+              : Text(
+                  AppStrings.offline,
+                  style: context.textStyles.onlineButton,
+                ),
         ),
       ),
     );

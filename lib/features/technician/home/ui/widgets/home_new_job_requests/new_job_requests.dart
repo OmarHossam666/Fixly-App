@@ -29,7 +29,7 @@ class NewJobRequests extends StatelessWidget {
               padding: EdgeInsets.all(10.r),
               child: Text(
                 AppStrings.newJobReauests,
-                style: AppStyles.dark.cardTitle,
+                style: context.textStyles.cardTitle,
               ),
             ),
           ),

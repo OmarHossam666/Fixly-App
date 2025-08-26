@@ -1,5 +1,6 @@
 import 'package:fixly/core/constants/app_colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class OnlineGreenDot extends StatefulWidget {
   const OnlineGreenDot({super.key});
@@ -21,10 +22,15 @@ class _OnlineGreenDotState extends State<OnlineGreenDot>
       vsync: this,
       duration: const Duration(seconds: 1),
     )..repeat(reverse: true); // loop back and forth
+  }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
 
     _colorAnimation = ColorTween(
-      begin: AppColors.darkColors.success,
-      end: AppColors.darkColors.success.withAlpha(128), // 50% alpha
+      begin: context.colors.success,
+      end: context.colors.success.withAlpha(128), // 50% alpha
     ).animate(CurvedAnimation(parent: _controller, curve: Curves.easeInOut));
   }
 
@@ -40,8 +46,8 @@ class _OnlineGreenDotState extends State<OnlineGreenDot>
       animation: _colorAnimation,
       builder: (context, child) {
         return Container(
-          width: 13,
-          height: 13,
+          width: 13.w,
+          height: 13.h,
           decoration: BoxDecoration(
             color: _colorAnimation.value,
             shape: BoxShape.circle,

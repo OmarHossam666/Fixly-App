@@ -1,5 +1,6 @@
 import 'package:fixly/core/constants/app_colors.dart';
 import 'package:fixly/core/constants/app_styles.dart';
+import 'package:fixly/core/helpers/spacing.dart';
 import 'package:fixly/core/widgets/surface_dark.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -40,7 +41,7 @@ PreferredSizeWidget fixlyAssistantAppBar(BuildContext context) {
                 size: 32.w,
               ),
             ),
-            const SizedBox(width: 12),
+            horizontalSpacing(12),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [

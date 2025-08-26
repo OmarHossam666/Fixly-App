@@ -1,5 +1,6 @@
 import 'package:fixly/core/constants/app_colors.dart';
 import 'package:fixly/core/constants/app_styles.dart';
+import 'package:fixly/core/helpers/spacing.dart';
 import 'package:fixly/features/customer/booking_confirmation/models/booking_confirmation_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -30,7 +31,7 @@ class ServiceDetailsReminderCard extends StatelessWidget {
               color: context.colors.primary,
             ),
           ),
-          SizedBox(height: 12.h),
+          verticalSpacing(12),
 
           // Service Type
           _DetailRow(
@@ -38,7 +39,7 @@ class ServiceDetailsReminderCard extends StatelessWidget {
             value: booking.serviceType,
             context: context,
           ),
-          SizedBox(height: 8.h),
+          verticalSpacing(8),
 
           // Visit Fee
           _DetailRow(
@@ -46,7 +47,7 @@ class ServiceDetailsReminderCard extends StatelessWidget {
             value: '${booking.visitFee} EGP',
             context: context,
           ),
-          SizedBox(height: 8.h),
+          verticalSpacing(8),
 
           // Location
           _DetailRow(
@@ -87,7 +88,7 @@ class _DetailRow extends StatelessWidget {
               fontWeight: FontWeight.w600,
             ),
           ),
-          SizedBox(height: 2.h),
+          verticalSpacing(2),
           Text(
             value,
             style: context.textStyles.bodyTextSmall.copyWith(
@@ -108,7 +109,7 @@ class _DetailRow extends StatelessWidget {
             fontWeight: FontWeight.w600,
           ),
         ),
-        SizedBox(width: 8.w),
+        horizontalSpacing(8),
         Expanded(
           child: Text(
             value,

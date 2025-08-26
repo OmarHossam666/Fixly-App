@@ -19,9 +19,9 @@ class _CustomerNavigationScreenState extends State<CustomerNavigationScreen> {
     const HomeScreen(),
     const ChatScreen(),
     const MyBookingsScreen(),
-
     const ProfileScreen(),
   ];
+
   int currentIndex = 0;
 
   @override

@@ -12,7 +12,7 @@ class TechnicianHomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.darkColors.background,
+      backgroundColor: context.colors.background,
       body: SafeArea(
         child: SingleChildScrollView(
           child: SizedBox(
@@ -27,7 +27,7 @@ class TechnicianHomeScreen extends StatelessWidget {
                     padding: EdgeInsets.all(15.w),
                     child: Column(
                       children: [
-                        StatsOverviewWidgets(),
+                        const StatsOverviewWidgets(),
                         verticalSpacing(30),
                         const NewJobRequests(),
                       ],
