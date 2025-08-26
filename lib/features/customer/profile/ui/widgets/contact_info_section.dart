@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:fixly/core/constants/app_colors.dart';
 import 'package:fixly/core/constants/app_styles.dart';
 import 'package:fixly/core/helpers/spacing.dart';
@@ -18,7 +19,7 @@ class ContactInfoSection extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            'Contact Information',
+            'contact_information'.tr(),
             style: context.textStyles.sectionHeader.copyWith(fontSize: 18.sp),
           ),
           verticalSpacing(16),

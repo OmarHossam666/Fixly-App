@@ -26,7 +26,7 @@ class _FixlyAssistantChatProvidersDetailsScreenState
     super.initState();
     _tabController = TabController(length: 2, vsync: this);
   }
-  
+
   @override
   void dispose() {
     _tabController.dispose();
@@ -68,7 +68,7 @@ class _FixlyAssistantChatProvidersDetailsScreenState
             child: Container(
               margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
               decoration: BoxDecoration(
-                color: const Color(0xFF2C2C3E),
+                color: context.colors.background,
                 borderRadius: BorderRadius.circular(10),
               ),
               child: TabBar(
@@ -79,6 +79,7 @@ class _FixlyAssistantChatProvidersDetailsScreenState
                   color: context.colors.accent,
                   borderRadius: BorderRadius.circular(10.r),
                 ),
+
                 dividerColor: Colors.transparent,
                 indicatorColor: Colors.transparent,
                 indicatorSize: TabBarIndicatorSize.tab,
@@ -117,21 +118,26 @@ class _FixlyAssistantChatProvidersDetailsScreenState
           // List View Tab
           (widget.providersList != null && widget.providersList!.isNotEmpty)
               ? ListView.builder(
-                  padding: const EdgeInsets.all(16),
                   itemCount: widget.providersList?.length,
                   itemBuilder: (context, index) {
                     final tech = widget.providersList![index];
-                    return TechnicianCard(
+                    return FixlyTechnicianCard(
                       firstName: tech["first_name"] ?? "Unknown",
                       lastName: tech["last_name"] ?? "",
                       distance: "${index + 1}.${(index * 3 + 1) % 9} km away",
                       rating: (tech["rating"] as num?)?.toDouble() ?? 0.0,
-                      flash: index % 2 == 0,
-                      verified: true,
-                      available: true,
-                      services:
+                      isFixlyFlash: index % 2 == 0,
+                      isIdVerified: true,
+                      isBackgroundChecked: true,
+                      isFixlyTrained: true,
+                      profession:
                           (tech["services_offered"] as List?)?.cast<String>() ??
                           [],
+                      jobsCount: 0,
+                      availabilityStatus: true,
+                      timeAway: '$index km',
+                      price: '${index * 100} EGP',
+                      profileImagePath: '',
                     );
                   },
                 )

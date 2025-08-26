@@ -1,68 +1,82 @@
 import 'package:fixly/core/constants/app_colors.dart';
 import 'package:fixly/core/constants/app_styles.dart';
-import 'package:fixly/core/helpers/spacing.dart';
 import 'package:fixly/core/widgets/custom_elevated_button.dart';
+import 'package:fixly/core/widgets/surface_dark.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ViewProfileBookNowRow extends StatelessWidget {
-  final bool available;
-  const ViewProfileBookNowRow({super.key, required this.available});
+  const ViewProfileBookNowRow({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Expanded(
-          child: CustomElevatedButton(
-            color: context.colors.facebook,
-            text: 'View Profile',
-            radius: 10,
-            textStyle: context.textStyles.bold14Text,
-          ),
-        ),
-        horizontalSpacing(8),
-        Container(
-          height: 40.w,
-          width: 40.w,
-          decoration: BoxDecoration(
-            color: context.colors.success,
-            shape: BoxShape.circle,
-          ),
-          child: IconButton(
-            onPressed: () {},
-            icon: Icon(Icons.call, color: Colors.white, size: 20.w),
-          ),
-        ),
-        horizontalSpacing(8),
-        Container(
-          height: 40.w,
-          width: 40.w,
-          decoration: BoxDecoration(
-            color: context.colors.facebook,
-            shape: BoxShape.circle,
-          ),
-          child: IconButton(
-            onPressed: () {},
-            icon: Icon(Icons.message, color: Colors.white, size: 20.w),
-          ),
-        ),
-        horizontalSpacing(8),
-        Expanded(
-          child: ElevatedButton(
-            onPressed: available ? () {} : null,
-            style: ElevatedButton.styleFrom(
-              backgroundColor: available
-                  ? context.colors.accent
-                  : context.colors.lightRed,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(8),
+    return  Row(
+            children: [
+              // View Profile button
+              Expanded(
+                flex: 2,
+                child: CustomElevatedButton(
+                  color: const Color(0xFF374151),
+                  text: 'View Profile',
+                  height: 48.h,
+                  radius: 12.r,
+                  textStyle: context.textStyles.bold14Text.copyWith(
+                    fontSize: 13.sp,
+                    fontWeight: FontWeight.w900,
+                  ),
+                ),
               ),
-            ),
-            child: Text("Book Now", style: context.textStyles.bold14Text),
-          ),
-        ),
-      ],
-    );
+
+              SizedBox(width: 6.w),
+
+              // Call button
+              SurfaceDark(
+                width: 40.w,
+                height: 40.w,
+                surfaceColor: context.colors.success,
+                borderRadiusAll: true,
+                allRadius: 12.r,
+                child: Icon(
+                  Icons.phone,
+                  color: context.colors.textOnAccent,
+                  size: 20.sp,
+                ),
+              ),
+
+              SizedBox(width: 6.w),
+
+              // Message button
+              SurfaceDark(
+                width: 40.w,
+                height: 40.w,
+                surfaceColor: context.colors.facebook,
+                borderRadiusAll: true,
+                allRadius: 12.r,
+                child: Icon(
+                  Icons.message,
+                  color: context.colors.textOnAccent,
+                  size: 20.sp,
+                ),
+              ),
+
+              SizedBox(width: 6.w),
+
+              // Book Now button
+              Expanded(
+                flex: 2,
+                child: CustomElevatedButton(
+                  color: context.colors.accent,
+                  text: 'Book Now',
+                  height: 48.h,
+                  radius: 12.r,
+                  textStyle: context.textStyles.bold14Text.copyWith(
+                    color: context.colors.black,
+                    fontSize: 13.sp,
+                    fontWeight: FontWeight.w900,
+                  ),
+                ),
+              ),
+            ],
+          );
   }
 }

@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:fixly/core/constants/app_theme.dart';
 import 'package:fixly/core/routing/models/router_choice.dart';
 import 'package:fixly/core/routing/routers/customer_router_config.dart';
@@ -31,6 +32,9 @@ class _FixlyAppState extends State<FixlyApp> {
             theme: AppTheme.light,
             darkTheme: AppTheme.dark,
             themeMode: ThemeMode.dark,
+            localizationsDelegates: context.localizationDelegates,
+            supportedLocales: context.supportedLocales,
+            locale: context.locale,
             home: WhoAreYouScreen(
               onChooseRouter: (choice) {
                 setState(() {
@@ -51,6 +55,9 @@ class _FixlyAppState extends State<FixlyApp> {
           theme: AppTheme.light,
           darkTheme: AppTheme.dark,
           themeMode: ThemeMode.dark,
+          localizationsDelegates: context.localizationDelegates,
+          supportedLocales: context.supportedLocales,
+          locale: context.locale,
           routerConfig: selectedRouter!,
         );
       },
