@@ -1,4 +1,226 @@
-{
+// DO NOT EDIT. This is code generated via package:easy_localization/generate.dart
+
+// ignore_for_file: prefer_single_quotes, avoid_renaming_method_parameters, constant_identifier_names
+
+import 'dart:ui';
+
+import 'package:easy_localization/easy_localization.dart' show AssetLoader;
+
+class CodegenLoader extends AssetLoader{
+  const CodegenLoader();
+
+  @override
+  Future<Map<String, dynamic>?> load(String path, Locale locale) {
+    return Future.value(mapLocales[locale.toString()]);
+  }
+
+  static const Map<String,dynamic> _ar = {
+  "app_identity": {
+    "app_english_name": "Fixly",
+    "app_arabic_name": "صلّحلي"
+  },
+  "status_states": {
+    "offline": "غير متصل",
+    "online": "متصل",
+    "online_receiving_jobs": "متصل - يستقبل الطلبات",
+    "available_now": "متاح الآن",
+    "unavailable": "غير متاح"
+  },
+  "navigation_labels": {
+    "home": "الرئيسية",
+    "jobs": "الأعمال",
+    "earnings": "الأرباح",
+    "profile": "الملف الشخصي",
+    "chat": "المحادثة",
+    "my_bookings": "حجوزاتي"
+  },
+  "metrics_and_stats": {
+    "todays_earnings": "أرباح اليوم",
+    "completed_jobs": "الأعمال المكتملة",
+    "average_rating": "متوسط التقييم",
+    "acceptance_rate": "معدل القبول",
+    "on_time_arrival": "الوصول في الموعد",
+    "customer_rating": "تقييم العملاء",
+    "performance_metrics": "مؤشرات الأداء",
+    "total_balance": "الرصيد الكلي"
+  },
+  "services": {
+    "electrical_wiring": "تمديدات كهربائية",
+    "ac_repair": "إصلاح المكيّف",
+    "plumbing_fix": "تصليح السباكة"
+  },
+  "job_actions": {
+    "reject": "رفض",
+    "accept": "قبول",
+    "urgent_uppercase": "عاجل",
+    "new_job_requests": "طلبات عمل جديدة"
+  },
+  "distances_and_locations": {
+    "onehalf_km_away": "يبعد 1.5 كم",
+    "km_away": "كم بعيد",
+    "near_your_location": "بالقرب من موقعك"
+  },
+  "welcome_and_greetings": {
+    "welcome_to_fixly": "مرحباً بك في صلّحلي",
+    "who_are_you": "من أنت؟",
+    "welcome_chat_message": "👋 أهلاً! كيف أقدر أساعدك اليوم في احتياجات صيانة منزلك؟"
+  },
+  "user_types_and_descriptions": {
+    "i_need_services": "أحتاج خدمات",
+    "i_provide_services": "أقدّم خدمات",
+    "book_trusted_professionals": "احجز خبراء موثوقين للإصلاحات والصيانة المنزلية",
+    "join_network_professionals": "انضم لشبكة الفنيين المهرة وطور عملك"
+  },
+  "feature_items_customer": {
+    "verified_technicians": "فنّيون موثّقون",
+    "secure_payments": "مدفوعات آمنة",
+    "real_time_tracking": "تتبع لحظي",
+    "quality_guarantee": "ضمان الجودة"
+  },
+  "feature_items_technician": {
+    "flexible_scheduling": "جدولة مرنة",
+    "customer_reviews": "مراجعات العملاء",
+    "instant_payments": "مدفوعات فورية",
+    "business_tools": "أدوات العمل"
+  },
+  "buttons_and_actions": {
+    "continue": "متابعة",
+    "skip": "تخطي",
+    "next": "التالي",
+    "get_started": "ابدأ الآن",
+    "view_technicians": "عرض الفنيين",
+    "view_profile": "عرض الملف الشخصي",
+    "book_now": "احجز الآن",
+    "logout": "تسجيل خروج"
+  },
+  "chat_and_messaging": {
+    "thinking_message": "⏳ لحظة أفكر...",
+    "error_message": "😓 عذراً، حدث خطأ. حاول مرة أخرى!",
+    "thinking_comment": "إزالة \"جاري التفكير...\"",
+    "available_technicians": "الفنيون المتاحون",
+    "list_view": "عرض القائمة",
+    "map_view": "عرض الخريطة",
+    "map_view_coming_soon": "🗺 عرض الخريطة قريباً...",
+    "no_technicians_found": "لا يوجد فنّيون متاحون بالقرب منك."
+  },
+  "technician_verification": {
+    "id_verified": "تم التحقق من الهوية",
+    "background_checked": "تم التحقق من السجل",
+    "fixly_trained": "مدرّب من صلّحلي",
+    "fixly_flash": "صلّحلي فلاش"
+  },
+  "profile_sections": {
+    "contact_information": "معلومات الاتصال",
+    "email": "البريد الإلكتروني",
+    "phone": "الهاتف",
+    "address": "العنوان",
+    "my_jobs": "أعمالي",
+    "my_reviews": "مراجعاتي",
+    "documents": "المستندات",
+    "help_center": "مركز المساعدة"
+  },
+  "job_status_and_history": {
+    "job_history": "سجل الأعمال",
+    "completed": "مكتمل",
+    "canceled": "ملغى",
+    "no_canceled_jobs": "لا يوجد أعمال ملغاة"
+  },
+  "sample_data": {
+    "john_technician": "جون الفني",
+    "master_technician": "الفني الخبير",
+    "ahmed_hassan": "أحمد حسن",
+    "fatima_ali": "فاطمة علي",
+    "unknown": "غير معروف"
+  },
+  "time_and_pricing": {
+    "two_hours_ago": "منذ ساعتين",
+    "four_hours_ago": "منذ 4 ساعات",
+    "est_earnings": "الأرباح المقدّرة",
+    "egp_currency": "ج.م"
+  },
+  "progress_states": {
+    "technician_arrived": "وصل الفني",
+    "diagnosing_problem": "تشخيص المشكلة",
+    "repairing": "جاري الإصلاح",
+    "service_completed": "اكتملت الخدمة"
+  },
+  "service_details": {
+    "service": "الخدمة:",
+    "date_time": "التاريخ والوقت:",
+    "visit_fee": "رسوم الزيارة:",
+    "location": "الموقع:"
+  },
+  "billing_and_payment": {
+    "visit_inspection": "زيارة وفحص",
+    "visit_inspection_fee": "رسوم الزيارة والفحص",
+    "labor_cost": "تكلفة العمل",
+    "spare_parts": "قطع الغيار",
+    "spare_parts_cost": "تكلفة قطع الغيار",
+    "tip": "إكرامية",
+    "total_paid": "إجمالي المدفوع",
+    "total": "الإجمالي",
+    "discount": "خصم",
+    "enter_promo_code": "أدخل كود الخصم",
+    "custom_amount": "مبلغ مخصص",
+    "please_confirm_handed": "يرجى تأكيد أنك سلّمت ",
+    "cash_to_technician": " إلى "
+  },
+  "receipt_details": {
+    "transaction_id": "رقم العملية",
+    "date": "التاريخ",
+    "time": "الوقت",
+    "booking_id": "رقم الحجز",
+    "technician": "الفني",
+    "customer": "العميل"
+  },
+  "rating_and_reviews": {
+    "share_experience": "شارك تجربتك مع المستخدمين الآخرين...",
+    "professional": "محترف",
+    "on_time": "في الموعد",
+    "clean_work": "عمل نظيف",
+    "fair_price": "سعر عادل",
+    "friendly": "ودود",
+    "expert": "خبير",
+    "quick_service": "خدمة سريعة",
+    "problem_solved": "تم حل المشكلة",
+    "rating_label": "⭐ التقييم",
+    "jobs_completed": "الأعمال المكتملة",
+    "years_experience": "سنوات الخبرة"
+  },
+  "search_and_discovery": {
+    "search_placeholder": "ابحث عن سبّاك، كهربائي، مكيّف..."
+  },
+  "profile_menu_items": {
+    "account": "الحساب",
+    "edit_profile": "تعديل الملف الشخصي",
+    "update_personal_info": "تحديث بياناتك الشخصية",
+    "my_addresses": "عناويني",
+    "manage_saved_locations": "إدارة المواقع المحفوظة",
+    "payment_methods": "طرق الدفع",
+    "cards_payment_options": "البطاقات وخيارات الدفع",
+    "preferences": "التفضيلات",
+    "notifications": "الإشعارات",
+    "manage_notifications": "إدارة الإشعارات",
+    "app_settings": "إعدادات التطبيق",
+    "language_theme_more": "اللغة، المظهر والمزيد",
+    "support": "الدعم",
+    "service_history": "سجل الخدمات",
+    "view_past_services": "عرض جميع الخدمات السابقة",
+    "help_support": "المساعدة والدعم",
+    "get_help_contact": "احصل على المساعدة وتواصل معنا"
+  },
+  "chat_history": {
+    "kitchen_sink_issue": "مشكلة في حوض المطبخ",
+    "drain_cleaner_worked": "شكراً! منظف المجاري عمل بشكل ممتاز.",
+    "ac_not_cooling": "المكيّف لا يبرد",
+    "technician_arrival": "سيصل الفني أحمد الساعة 3:00 مساءً"
+  },
+  "onboarding": {
+    "trusted_technician": "فنّي يمكنك الوثوق به...",
+    "peace_of_mind": "مع راحة البال."
+  }
+};
+static const Map<String,dynamic> _en = {
   "app_identity": {
     "app_english_name": "Fixly",
     "app_arabic_name": "صلّحلي"
@@ -234,7 +456,10 @@
     "translations_path": "assets/translations"
   },
   "localization": {
-    "supported_locales": ["en", "ar"],
+    "supported_locales": [
+      "en",
+      "ar"
+    ],
     "fallback_locale": "ar",
     "start_locale": "ar"
   },
@@ -252,7 +477,6 @@
     "rating_key": "rating",
     "services_offered_key": "services_offered"
   },
-
   "sample_values": {
     "sample_time_45": "45",
     "sample_price_50": "50 ",
@@ -271,8 +495,9 @@
     "bullet_separator": " • ",
     "newline_prefix": "\n"
   },
-
   "questions": {
     "how_can_help": "What can we fix for you today?"
   }
+};
+static const Map<String, Map<String,dynamic>> mapLocales = {"ar": _ar, "en": _en};
 }

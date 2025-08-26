@@ -1,7 +1,8 @@
-import 'package:fixly/core/constants/app_strings.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:fixly/core/constants/app_styles.dart';
 import 'package:fixly/core/helpers/spacing.dart';
 import 'package:fixly/core/widgets/stars_widget.dart';
+import 'package:fixly/generated/locale_keys.g.dart';
 import 'package:flutter/material.dart';
 
 class JobRequestTitleAndDistanceAndRating extends StatelessWidget {
@@ -12,14 +13,14 @@ class JobRequestTitleAndDistanceAndRating extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(AppStrings.electricalWiring, style: context.textStyles.cardTitle),
+        Text(LocaleKeys.services_electrical_wiring.tr(), style: AppStyles.dark.cardTitle),
         Text(AppStrings.onehalfKmAway, style: context.textStyles.bodyText),
 
         Row(
           children: [
             const StarsWidget(starsNumber: 5),
             horizontalSpacing(5),
-            Text(4.8.toString(), style: context.textStyles.logoSubtitle),
+            Text(LocaleKeys.metrics_and_stats_average_rating.tr(), style: context.textStyles.logoSubtitle),
           ],
         ),
       ],

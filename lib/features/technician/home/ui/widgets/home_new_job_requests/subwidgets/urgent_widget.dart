@@ -1,9 +1,9 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:fixly/core/constants/app_colors.dart';
-import 'package:fixly/core/constants/app_strings.dart';
 import 'package:fixly/core/constants/app_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
+import 'package:fixly/generated/locale_keys.g.dart';
 class UrgentWidget extends StatelessWidget {
   const UrgentWidget({super.key});
 
@@ -20,7 +20,7 @@ class UrgentWidget extends StatelessWidget {
       ),
 
       child: Text(
-        AppStrings.urgentUppercase,
+        LocaleKeys.job_actions_urgent_uppercase.tr(),
         style: context.textStyles.bold14Text.copyWith(
           fontWeight: FontWeight.w500,
         ),

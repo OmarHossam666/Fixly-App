@@ -32,6 +32,8 @@ dependencies:
   provider: ^6.1.2
   shared_preferences: ^2.3.3
 
+  build_runner: ^2.7.0
+
 
 dev_dependencies:
   flutter_test:
@@ -59,3 +61,8 @@ flutter:
         - asset: assets/fonts/Quicksand/Quicksand-Medium.ttf
         - asset: assets/fonts/Quicksand/Quicksand-SemiBold.ttf
         - asset: assets/fonts/Quicksand/Quicksand-Bold.ttf
+
+easy_localization:
+  path: assets/translations
+  format: json
+  use_only_base_file: true
