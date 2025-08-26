@@ -28,7 +28,7 @@ class TechnicianHomeAppBar extends StatelessWidget {
                     const NotificationWithBadge(),
 
                     CircleAvatar(
-                      backgroundColor: AppColors.darkColors.surfaceElevated,
+                      backgroundColor:context.colors.surfaceElevated,
                     ),
                   ],
                 ),

@@ -1,8 +1,10 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:fixly/core/constants/app_colors.dart';
 import 'package:fixly/core/constants/app_strings.dart';
 import 'package:fixly/core/constants/app_styles.dart';
 import 'package:fixly/core/helpers/spacing.dart';
 import 'package:fixly/features/technician/home/ui/widgets/home_technician_app_top_bar/subwidgets/green_status_dot.dart';
+import 'package:fixly/generated/locale_keys.g.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -47,7 +49,7 @@ class _StatusOnlineButtonState extends State<StatusOnlineButton> {
                     ),
                   ],
                 )
-              : Text(AppStrings.offline, style: AppStyles.dark.onlineButton),
+              : Text(LocaleKeys.status_states_offline.tr(), style: AppStyles.dark.onlineButton),
         ),
       ),
     );
