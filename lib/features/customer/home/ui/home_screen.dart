@@ -1,5 +1,6 @@
 import 'package:fixly/core/constants/app_colors.dart';
 import 'package:fixly/core/constants/app_styles.dart';
+import 'package:fixly/core/widgets/theme_toggle_button.dart';
 import 'package:fixly/features/customer/home/data/services.dart';
 import 'package:fixly/features/customer/home/models/service.dart';
 import 'package:fixly/features/customer/home/ui/widgets/custom_search_bar.dart';
@@ -189,6 +190,8 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                         ],
                       ),
+                      const Spacer(),
+                      const ThemeToggleSwitch(),
                     ],
                   ),
                   SizedBox(height: 16.h),
