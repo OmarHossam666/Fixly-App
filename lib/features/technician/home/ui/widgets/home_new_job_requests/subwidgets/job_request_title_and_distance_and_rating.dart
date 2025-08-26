@@ -14,7 +14,7 @@ class JobRequestTitleAndDistanceAndRating extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(LocaleKeys.services_electrical_wiring.tr(), style: AppStyles.dark.cardTitle),
-        Text(LocaleKeys.distances_and_locations_onehalf_km_away.tr(), style: AppStyles.dark.bodyText),
+        Text(AppStrings.onehalfKmAway, style: context.textStyles.bodyText),
 
         Row(
           children: [

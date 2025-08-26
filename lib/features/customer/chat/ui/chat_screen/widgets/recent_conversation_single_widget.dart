@@ -27,9 +27,9 @@ class RecentConversationSingleWidget extends StatelessWidget {
       padding: EdgeInsets.only(bottom: 16.h),
       child: SurfaceDark(
         borderRadiusAll: true,
-        allRadius: 15,
+        allRadius: 15.r,
         padding: EdgeInsets.all(16.r),
-
+        borderWidth: 2,
         child: IntrinsicHeight(
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -60,7 +60,9 @@ class RecentConversationSingleWidget extends StatelessWidget {
 
               Text(
                 time,
-                style: context.textStyles.bodyTextSmall.copyWith(fontSize: 12),
+                style: context.textStyles.bodyTextSmall.copyWith(
+                  fontSize: 12.sp,
+                ),
               ),
             ],
           ),

@@ -1,5 +1,6 @@
 import 'package:fixly/core/constants/app_colors.dart';
 import 'package:fixly/core/constants/app_styles.dart';
+import 'package:fixly/core/helpers/spacing.dart';
 import 'package:fixly/features/customer/technician_profile/models/technician_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -32,7 +33,7 @@ class TechnicianInfoCard extends StatelessWidget {
               child: Text(technician.photo, style: TextStyle(fontSize: 20.sp)),
             ),
           ),
-          SizedBox(width: 12.w),
+          horizontalSpacing(12),
 
           // Technician Details
           Expanded(
@@ -40,7 +41,7 @@ class TechnicianInfoCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(technician.name, style: context.textStyles.cardTitle),
-                SizedBox(height: 2.h),
+                verticalSpacing(2),
                 Text(
                   technician.tier,
                   style: context.textStyles.caption.copyWith(

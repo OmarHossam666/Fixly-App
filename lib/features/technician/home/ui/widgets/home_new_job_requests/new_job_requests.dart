@@ -31,7 +31,7 @@ class NewJobRequests extends StatelessWidget {
               padding: EdgeInsets.all(10.r),
               child: Text(
                 LocaleKeys.job_actions_new_job_requests.tr(),
-                style: AppStyles.dark.cardTitle,
+                style: context.textStyles.cardTitle,
               ),
             ),
           ),

@@ -10,11 +10,7 @@ class StarsWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: List.generate(starsNumber, (index) {
-        return Icon(
-          Icons.star,
-          size: 10.r,
-          color: AppColors.darkColors.starColor,
-        );
+        return Icon(Icons.star, size: 10.r, color: context.colors.starColor);
       }),
     );
   }

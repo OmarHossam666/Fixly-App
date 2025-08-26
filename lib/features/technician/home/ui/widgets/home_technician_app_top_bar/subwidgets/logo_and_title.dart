@@ -13,23 +13,54 @@ class LogoAndTitle extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        CircleAvatar(
-          radius: 20.r,
-          backgroundColor: AppColors.darkColors.primary,
-          foregroundColor: AppColors.darkColors.primaryButtonText,
-          child: const Icon(Icons.settings),
+        Container(
+          width: 40.w,
+          height: 40.h,
+          decoration: BoxDecoration(
+            color: context.colors.primary,
+            borderRadius: BorderRadius.circular(20.r),
+          ),
+          child: Stack(
+            children: [
+              Center(
+                child: Icon(
+                  Icons.settings,
+                  size: 20.sp,
+                  color: context.colors.background,
+                ),
+              ),
+              Positioned(
+                bottom: 1,
+                right: 1,
+                child: Container(
+                  width: 12.w,
+                  height: 12.h,
+                  decoration: BoxDecoration(
+                    color: context.colors.accent,
+                    borderRadius: BorderRadius.circular(6.r),
+                  ),
+                  child: Icon(
+                    Icons.bolt,
+                    size: 6.sp,
+                    color: context.colors.background,
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
         horizontalSpacing(10),
         Text.rich(
           TextSpan(
             children: [
+
               TextSpan(
                 text: LocaleKeys.app_identity_app_english_name.tr(),
-                style: AppStyles.dark.screenTitle,
+                style: context.textStyles.screenTitle,
               ),
               TextSpan(
                 text: "\n${LocaleKeys.app_identity_app_arabic_name.tr()}",
-                style: AppStyles.dark.logoSubtitle,
+                style: context.textStyles.logoSubtitle,
               ),
             ],
           ),

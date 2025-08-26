@@ -1,5 +1,6 @@
 import 'package:fixly/core/constants/app_colors.dart';
 import 'package:fixly/core/constants/app_styles.dart';
+import 'package:fixly/core/helpers/spacing.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -31,7 +32,7 @@ class ReviewTextWidget extends StatelessWidget {
             'Write a Review (Optional)',
             style: context.textStyles.sectionHeader,
           ),
-          SizedBox(height: 16.h),
+          verticalSpacing(16),
 
           // Text field
           TextField(

@@ -1,6 +1,5 @@
 import 'package:fixly/core/constants/app_colors.dart';
 import 'package:fixly/core/constants/app_styles.dart';
-import 'package:fixly/core/helpers/spacing.dart';
 import 'package:fixly/core/network/gemini/gemini_api.dart';
 import 'package:fixly/core/network/gemini/service_providers_database.dart';
 import 'package:fixly/core/routing/routes/customer_routes.dart';
