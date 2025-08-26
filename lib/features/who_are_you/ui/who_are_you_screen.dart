@@ -221,12 +221,12 @@ class _WhoAreYouScreenState extends State<WhoAreYouScreen> {
                       children: [
                         Text(
                           'Continue',
-                          style: context.textStyles.bodyTextBold,
+                          style: context.textStyles.primaryButton,
                         ),
                         horizontalSpacing(8),
                         Icon(
                           Icons.arrow_forward,
-                          color: Colors.white,
+                          color: context.colors.primaryButtonText,
                           size: 20.r,
                         ),
                       ],

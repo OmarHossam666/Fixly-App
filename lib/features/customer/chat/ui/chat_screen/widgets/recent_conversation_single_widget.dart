@@ -29,7 +29,7 @@ class RecentConversationSingleWidget extends StatelessWidget {
         borderRadiusAll: true,
         allRadius: 15.r,
         padding: EdgeInsets.all(16.r),
-
+        borderWidth: 2,
         child: IntrinsicHeight(
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
