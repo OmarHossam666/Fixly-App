@@ -1,4 +1,3 @@
-import 'package:fixly/core/constants/app_colors.dart';
 import 'package:fixly/core/helpers/spacing.dart';
 import 'package:fixly/core/widgets/surface_dark.dart';
 import 'package:fixly/features/customer/chat/ui/fixly_assistant_screen/widgets/available_now.dart';

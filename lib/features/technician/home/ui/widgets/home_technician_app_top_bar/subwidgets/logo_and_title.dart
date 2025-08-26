@@ -14,8 +14,8 @@ class LogoAndTitle extends StatelessWidget {
       children: [
         CircleAvatar(
           radius: 20.r,
-          backgroundColor: AppColors.darkColors.primary,
-          foregroundColor: AppColors.darkColors.primaryButtonText,
+          backgroundColor: context.colors.primary,
+          foregroundColor: context.colors.primaryButtonText,
           child: const Icon(Icons.settings),
         ),
         horizontalSpacing(10),
@@ -24,11 +24,11 @@ class LogoAndTitle extends StatelessWidget {
             children: [
               TextSpan(
                 text: AppStrings.appEnglishName,
-                style: AppStyles.dark.screenTitle,
+                style: context.textStyles.screenTitle,
               ),
               TextSpan(
                 text: "\n${AppStrings.appArabicName}",
-                style: AppStyles.dark.logoSubtitle,
+                style: context.textStyles.logoSubtitle,
               ),
             ],
           ),

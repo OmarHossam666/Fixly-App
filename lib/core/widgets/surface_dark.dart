@@ -68,7 +68,7 @@ class SurfaceDark extends StatelessWidget {
       margin: margin,
       padding: padding,
       decoration: BoxDecoration(
-        color: surfaceColor ?? AppColors.darkColors.surface,
+        color: surfaceColor ?? context.colors.surface,
         borderRadius: borderRadiusAll
             ? BorderRadius.circular(allRadius)
             : BorderRadius.only(

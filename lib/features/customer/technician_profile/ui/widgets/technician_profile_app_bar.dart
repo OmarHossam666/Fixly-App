@@ -1,5 +1,6 @@
 import 'package:fixly/core/constants/app_colors.dart';
 import 'package:fixly/core/constants/app_styles.dart';
+import 'package:fixly/core/helpers/spacing.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -45,7 +46,7 @@ class TechnicianProfileAppBar extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(width: 16.w),
+          horizontalSpacing(16),
           Text('Technician Profile', style: context.textStyles.screenTitle),
         ],
       ),

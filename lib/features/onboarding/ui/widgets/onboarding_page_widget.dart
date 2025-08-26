@@ -1,5 +1,6 @@
 import 'package:fixly/core/constants/app_colors.dart';
 import 'package:fixly/core/constants/app_styles.dart';
+import 'package:fixly/core/helpers/spacing.dart';
 import 'package:fixly/features/onboarding/models/onboarding_data_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -31,19 +32,17 @@ class OnboardingPageWidget extends StatelessWidget {
               ).colorScheme.surfaceContainerHighest.withValues(alpha: 0.3),
             ),
             child: Center(
-              child: SizedBox(
+              child: Lottie.asset(
+                onboardingData.lottieFilePath,
                 width: 200.w,
                 height: 200.h,
-                child: Lottie.asset(
-                  onboardingData.lottieFilePath,
-                  fit: BoxFit.contain,
-                  repeat: true,
-                  animate: true,
-                ),
+                fit: BoxFit.contain,
+                repeat: true,
+                animate: true,
               ),
             ),
           ),
-          SizedBox(height: 48.h),
+          verticalSpacing(48),
           // Content
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 20.w),
@@ -54,7 +53,7 @@ class OnboardingPageWidget extends StatelessWidget {
                   style: context.textStyles.headline,
                   textAlign: TextAlign.center,
                 ),
-                SizedBox(height: 8.h),
+                verticalSpacing(8),
                 Text(
                   onboardingData.subtitle,
                   style: context.textStyles.sectionHeader.copyWith(
@@ -62,7 +61,7 @@ class OnboardingPageWidget extends StatelessWidget {
                   ),
                   textAlign: TextAlign.center,
                 ),
-                SizedBox(height: 24.h),
+                verticalSpacing(24),
                 Text(
                   onboardingData.description,
                   style: context.textStyles.bodyTextSmall,

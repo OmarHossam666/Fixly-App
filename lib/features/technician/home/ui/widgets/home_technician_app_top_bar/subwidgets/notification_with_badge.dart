@@ -35,7 +35,7 @@ class NotificationWithBadge extends StatelessWidget {
               },
             );
           },
-          icon: Icon(Icons.notifications, color: AppColors.darkColors.accent),
+          icon: Icon(Icons.notifications, color: context.colors.accent),
         ),
         Positioned(
           right: 9.w,
@@ -45,12 +45,12 @@ class NotificationWithBadge extends StatelessWidget {
             constraints: BoxConstraints(minHeight: 18.w, minWidth: 18.w),
             decoration: BoxDecoration(
               shape: BoxShape.circle,
-              color: AppColors.darkColors.notificationBadge,
+              color: context.colors.notificationBadge,
             ),
             child: Text(
               "1",
-              style: AppStyles.dark.logoSubtitle.copyWith(
-                color: AppColors.darkColors.textOnAccent,
+              style: context.textStyles.logoSubtitle.copyWith(
+                color: context.colors.textOnAccent,
               ),
               textAlign: TextAlign.center,
             ),

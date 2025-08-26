@@ -56,7 +56,7 @@ class JobCard extends StatelessWidget {
               Row(
                 children: [
                   StarsWidget(starsNumber: starsNumber),
-                  const SizedBox(width: 4),
+                  horizontalSpacing(4),
                   Text(rating, style: context.textStyles.logoSubtitle),
                 ],
               ),
