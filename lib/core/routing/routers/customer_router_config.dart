@@ -76,7 +76,12 @@ class CustomerRouterConfig {
         path: CustomerRoutes.chatProvidersDetailsScreen,
         name: CustomerRoutes.chatProvidersDetailsScreen.substring(1),
         builder: (context, state) {
-          final providersList = state.extra as List<Map<String, dynamic>>?;
+          List<Map<String, dynamic>>? providersList;
+          try {
+            providersList = state.extra as List<Map<String, dynamic>>?;
+          } catch (e) {
+            providersList = null;
+          }
           return FixlyAssistantChatProvidersDetailsScreen(providersList: providersList);
         },
       ),

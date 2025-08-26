@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:fixly/fixly_app.dart';
 import 'package:fixly/core/providers/theme_provider.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -7,6 +8,7 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await EasyLocalization.ensureInitialized();
 
   await Supabase.initialize(
     url: 'https://upjwyddbftenlgqkbfiu.supabase.co',
@@ -15,10 +17,20 @@ Future<void> main() async {
   );
   await ScreenUtil.ensureScreenSize();
 
+
   runApp(
     ChangeNotifierProvider(
       create: (context) => ThemeProvider(),
+      child: EasyLocalization(
+      supportedLocales: [Locale('en'), Locale('ar')],
+      path:
+          'assets/translations', // <-- change the path of the translation files
+      fallbackLocale: Locale('ar'),
+      startLocale: const Locale('ar'),
+
+
       child: const FixlyApp(),
+      ),
     ),
   );
 }
