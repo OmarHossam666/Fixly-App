@@ -1,5 +1,7 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:fixly/core/constants/app_colors.dart';
 import 'package:fixly/core/constants/app_styles.dart';
+import 'package:fixly/generated/locale_keys.g.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
@@ -18,8 +20,8 @@ class NotificationWithBadge extends StatelessWidget {
               context: context,
               builder: (context) {
                 return AlertDialog(
-                  title: const Text("Notifications"),
-                  content: const Text("You don't have new notifications."),
+                  title:  Text(LocaleKeys.profile_menu_items_notifications.tr()),
+                  content:  Text(LocaleKeys.profile_menu_items_no_new_notifications.tr()),
                   actions: [
                     TextButton(
                       onPressed: () {

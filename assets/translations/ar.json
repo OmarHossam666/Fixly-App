@@ -191,6 +191,7 @@
     "preferences": "التفضيلات",
     "notifications": "الإشعارات",
     "manage_notifications": "إدارة الإشعارات",
+    "no_new_notifications": "لا توجد إشعارات جديدة",
     "app_settings": "إعدادات التطبيق",
     "language_theme_more": "اللغة والمظهر والمزيد",
     "support": "الدعم",
@@ -209,30 +210,8 @@
     "trusted_technician": "فني يمكنك الوثوق به...",
     "peace_of_mind": "مع راحة البال."
   },
-  "route_paths": {
-    "navigation_screen": "/navigationScreen",
-    "onboarding_screen": "/onboardingScreen",
-    "authentication_screen": "/authenticationScreen",
-    "booking_confirmation_screen": "/bookingConfirmationScreen",
-    "review_booking_details_screen": "/reviewBookingDetailsScreen",
-    "technician_profile_screen": "/technicianProfileScreen",
-    "service_in_progress_screen": "/serviceInProgressScreen",
-    "final_bill_screen": "/finalBillScreen",
-    "rating_and_review_screen": "/ratingAndReviewScreen",
-    "receipt_screen": "/receiptScreen",
-    "fixly_assistant_screen": "/fixlyAssistantScreen",
-    "chat_providers_details_screen": "/chatProvidersDetailsScreen"
-  },
-  "asset_paths": {
-    "customer_onboarding_1": "assets/lotties/customer_onboarding_1.json",
-    "customer_onboarding_2": "assets/lotties/customer_onboarding_2.json",
-    "customer_onboarding_3": "assets/lotties/customer_onboarding_3.json",
-    "technician_onboarding_1": "assets/lotties/technician_onboarding_1.json",
-    "technician_onboarding_2": "assets/lotties/technician_onboarding_2.json",
-    "technician_onboarding_3": "assets/lotties/technician_onboarding_3.json",
-    "customer_profile_image": "assets/images/customer_profile_image.jpg",
-    "translations_path": "assets/translations"
-  },
+ 
+ 
   "localization": {
     "supported_locales": ["en", "ar"],
     "fallback_locale": "ar",

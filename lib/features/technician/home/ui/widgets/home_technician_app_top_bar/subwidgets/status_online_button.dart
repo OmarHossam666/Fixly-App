@@ -49,7 +49,7 @@ class _StatusOnlineButtonState extends State<StatusOnlineButton> {
                     ),
                   ],
                 )
-              : Text(
+              : 
                   Text(LocaleKeys.status_states_offline.tr(),
                   style: context.textStyles.onlineButton,
                 ),

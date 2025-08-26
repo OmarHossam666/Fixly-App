@@ -22,13 +22,13 @@ class CodegenLoader extends AssetLoader{
   "status_states": {
     "offline": "غير متصل",
     "online": "متصل",
-    "online_receiving_jobs": "متصل - يستقبل الطلبات",
+    "online_receiving_jobs": "متصل - يستقبل طلبات",
     "available_now": "متاح الآن",
     "unavailable": "غير متاح"
   },
   "navigation_labels": {
     "home": "الرئيسية",
-    "jobs": "الأعمال",
+    "jobs": "الوظائف",
     "earnings": "الأرباح",
     "profile": "الملف الشخصي",
     "chat": "المحادثة",
@@ -36,24 +36,24 @@ class CodegenLoader extends AssetLoader{
   },
   "metrics_and_stats": {
     "todays_earnings": "أرباح اليوم",
-    "completed_jobs": "الأعمال المكتملة",
-    "average_rating": "متوسط التقييم",
+    "completed_jobs": "الوظائف المكتملة",
+    "average_rating": "التقييم المتوسط",
     "acceptance_rate": "معدل القبول",
-    "on_time_arrival": "الوصول في الموعد",
+    "on_time_arrival": "الوصول في الوقت المحدد",
     "customer_rating": "تقييم العملاء",
     "performance_metrics": "مؤشرات الأداء",
     "total_balance": "الرصيد الكلي"
   },
   "services": {
     "electrical_wiring": "تمديدات كهربائية",
-    "ac_repair": "إصلاح المكيّف",
-    "plumbing_fix": "تصليح السباكة"
+    "ac_repair": "تصليح المكيف",
+    "plumbing_fix": "إصلاح السباكة"
   },
   "job_actions": {
     "reject": "رفض",
     "accept": "قبول",
     "urgent_uppercase": "عاجل",
-    "new_job_requests": "طلبات عمل جديدة"
+    "new_job_requests": "طلبات وظائف جديدة"
   },
   "distances_and_locations": {
     "onehalf_km_away": "يبعد 1.5 كم",
@@ -61,27 +61,30 @@ class CodegenLoader extends AssetLoader{
     "near_your_location": "بالقرب من موقعك"
   },
   "welcome_and_greetings": {
-    "welcome_to_fixly": "مرحباً بك في صلّحلي",
+    "welcome_to_fixly": "مرحبًا بك في صلّحلي",
     "who_are_you": "من أنت؟",
-    "welcome_chat_message": "👋 أهلاً! كيف أقدر أساعدك اليوم في احتياجات صيانة منزلك؟"
+    "welcome_chat_message": "👋 أهلاً! كيف أقدر أساعدك اليوم في خدمات المنزل؟",
+    "hello_name": "مرحبًا عمر!",
+    "welcome": "مرحبًا بك في صلّحلي!",
+    "how_can_help": "كيف أقدر أساعدك اليوم؟"
   },
   "user_types_and_descriptions": {
     "i_need_services": "أحتاج خدمات",
     "i_provide_services": "أقدّم خدمات",
-    "book_trusted_professionals": "احجز خبراء موثوقين للإصلاحات والصيانة المنزلية",
-    "join_network_professionals": "انضم لشبكة الفنيين المهرة وطور عملك"
+    "book_trusted_professionals": "احجز محترفين موثوقين لإصلاحات وصيانة المنزل",
+    "join_network_professionals": "انضم لشبكة المحترفين لدينا ونمِ عملك"
   },
   "feature_items_customer": {
-    "verified_technicians": "فنّيون موثّقون",
+    "verified_technicians": "فنيون موثوقون",
     "secure_payments": "مدفوعات آمنة",
     "real_time_tracking": "تتبع لحظي",
     "quality_guarantee": "ضمان الجودة"
   },
   "feature_items_technician": {
     "flexible_scheduling": "جدولة مرنة",
-    "customer_reviews": "مراجعات العملاء",
+    "customer_reviews": "تقييمات العملاء",
     "instant_payments": "مدفوعات فورية",
-    "business_tools": "أدوات العمل"
+    "business_tools": "أدوات الأعمال"
   },
   "buttons_and_actions": {
     "continue": "متابعة",
@@ -91,58 +94,60 @@ class CodegenLoader extends AssetLoader{
     "view_technicians": "عرض الفنيين",
     "view_profile": "عرض الملف الشخصي",
     "book_now": "احجز الآن",
-    "logout": "تسجيل خروج"
+    "logout": "تسجيل الخروج"
   },
   "chat_and_messaging": {
-    "thinking_message": "⏳ لحظة أفكر...",
+    "thinking_message": "⏳ دعني أفكر...",
     "error_message": "😓 عذراً، حدث خطأ. حاول مرة أخرى!",
-    "thinking_comment": "إزالة \"جاري التفكير...\"",
+    "thinking_comment": "إزالة \"جارٍ التفكير...\"",
     "available_technicians": "الفنيون المتاحون",
-    "list_view": "عرض القائمة",
+    "list_view": "عرض قائمة",
     "map_view": "عرض الخريطة",
     "map_view_coming_soon": "🗺 عرض الخريطة قريباً...",
-    "no_technicians_found": "لا يوجد فنّيون متاحون بالقرب منك."
+    "no_technicians_found": "لا يوجد فنيون متاحون بالقرب منك."
   },
   "technician_verification": {
-    "id_verified": "تم التحقق من الهوية",
-    "background_checked": "تم التحقق من السجل",
-    "fixly_trained": "مدرّب من صلّحلي",
-    "fixly_flash": "صلّحلي فلاش"
+    "id_verified": "الهوية موثقة",
+    "background_checked": "فحص الخلفية",
+    "fixly_trained": "تدريب صلّحلي",
+    "fixly_flash": "فلاش صلّحلي"
   },
   "profile_sections": {
     "contact_information": "معلومات الاتصال",
     "email": "البريد الإلكتروني",
     "phone": "الهاتف",
     "address": "العنوان",
-    "my_jobs": "أعمالي",
-    "my_reviews": "مراجعاتي",
+    "my_jobs": "وظائفي",
+    "my_reviews": "تقييماتي",
     "documents": "المستندات",
     "help_center": "مركز المساعدة"
   },
   "job_status_and_history": {
-    "job_history": "سجل الأعمال",
+    "job_history": "سجل الوظائف",
     "completed": "مكتمل",
     "canceled": "ملغى",
-    "no_canceled_jobs": "لا يوجد أعمال ملغاة"
+    "no_canceled_jobs": "لا يوجد وظائف ملغاة"
   },
   "sample_data": {
-    "john_technician": "جون الفني",
-    "master_technician": "الفني الخبير",
+    "john_technician": "الفني جون",
+    "master_technician": "الفني المحترف",
     "ahmed_hassan": "أحمد حسن",
     "fatima_ali": "فاطمة علي",
-    "unknown": "غير معروف"
+    "unknown": "غير معروف",
+    "sample_time_45": "٤٥"
   },
   "time_and_pricing": {
     "two_hours_ago": "منذ ساعتين",
-    "four_hours_ago": "منذ 4 ساعات",
-    "est_earnings": "الأرباح المقدّرة",
-    "egp_currency": "ج.م"
+    "four_hours_ago": "منذ ٤ ساعات",
+    "est_earnings": "الأرباح المتوقعة",
+    "egp_currency": "ج.م",
+    "seconds_left": "ثوانٍ متبقية"
   },
   "progress_states": {
     "technician_arrived": "وصل الفني",
     "diagnosing_problem": "تشخيص المشكلة",
     "repairing": "جاري الإصلاح",
-    "service_completed": "اكتملت الخدمة"
+    "service_completed": "اكتمل الخدمة"
   },
   "service_details": {
     "service": "الخدمة:",
@@ -153,17 +158,18 @@ class CodegenLoader extends AssetLoader{
   "billing_and_payment": {
     "visit_inspection": "زيارة وفحص",
     "visit_inspection_fee": "رسوم الزيارة والفحص",
-    "labor_cost": "تكلفة العمل",
+    "labor_cost": "تكلفة العمالة",
     "spare_parts": "قطع الغيار",
     "spare_parts_cost": "تكلفة قطع الغيار",
     "tip": "إكرامية",
-    "total_paid": "إجمالي المدفوع",
+    "total_paid": "الإجمالي المدفوع",
     "total": "الإجمالي",
     "discount": "خصم",
     "enter_promo_code": "أدخل كود الخصم",
     "custom_amount": "مبلغ مخصص",
-    "please_confirm_handed": "يرجى تأكيد أنك سلّمت ",
-    "cash_to_technician": " إلى "
+    "please_confirm_handed": "يرجى تأكيد أنك سلمت ",
+    "cash_to_technician": " إلى ",
+    "est_earnings": "الأرباح المتوقعة"
   },
   "receipt_details": {
     "transaction_id": "رقم العملية",
@@ -176,7 +182,7 @@ class CodegenLoader extends AssetLoader{
   "rating_and_reviews": {
     "share_experience": "شارك تجربتك مع المستخدمين الآخرين...",
     "professional": "محترف",
-    "on_time": "في الموعد",
+    "on_time": "في الوقت",
     "clean_work": "عمل نظيف",
     "fair_price": "سعر عادل",
     "friendly": "ودود",
@@ -184,40 +190,107 @@ class CodegenLoader extends AssetLoader{
     "quick_service": "خدمة سريعة",
     "problem_solved": "تم حل المشكلة",
     "rating_label": "⭐ التقييم",
-    "jobs_completed": "الأعمال المكتملة",
+    "jobs_completed": "الوظائف المكتملة",
     "years_experience": "سنوات الخبرة"
   },
   "search_and_discovery": {
-    "search_placeholder": "ابحث عن سبّاك، كهربائي، مكيّف..."
+    "search_placeholder": "ابحث عن سباك، كهربائي، مكيف..."
   },
   "profile_menu_items": {
     "account": "الحساب",
     "edit_profile": "تعديل الملف الشخصي",
-    "update_personal_info": "تحديث بياناتك الشخصية",
+    "update_personal_info": "تحديث معلوماتك الشخصية",
     "my_addresses": "عناويني",
     "manage_saved_locations": "إدارة المواقع المحفوظة",
     "payment_methods": "طرق الدفع",
-    "cards_payment_options": "البطاقات وخيارات الدفع",
+    "cards_payment_options": "بطاقات وخيارات الدفع",
     "preferences": "التفضيلات",
     "notifications": "الإشعارات",
     "manage_notifications": "إدارة الإشعارات",
     "app_settings": "إعدادات التطبيق",
-    "language_theme_more": "اللغة، المظهر والمزيد",
+    "language_theme_more": "اللغة والمظهر والمزيد",
     "support": "الدعم",
     "service_history": "سجل الخدمات",
-    "view_past_services": "عرض جميع الخدمات السابقة",
+    "view_past_services": "عرض كل الخدمات السابقة",
     "help_support": "المساعدة والدعم",
     "get_help_contact": "احصل على المساعدة وتواصل معنا"
   },
   "chat_history": {
     "kitchen_sink_issue": "مشكلة في حوض المطبخ",
-    "drain_cleaner_worked": "شكراً! منظف المجاري عمل بشكل ممتاز.",
-    "ac_not_cooling": "المكيّف لا يبرد",
-    "technician_arrival": "سيصل الفني أحمد الساعة 3:00 مساءً"
+    "drain_cleaner_worked": "شكرًا لك! المنظف عمل بشكل ممتاز.",
+    "ac_not_cooling": "المكيف لا يبرد",
+    "technician_arrival": "سيصل الفني أحمد الساعة 3:00 م"
   },
   "onboarding": {
-    "trusted_technician": "فنّي يمكنك الوثوق به...",
+    "trusted_technician": "فني يمكنك الوثوق به...",
     "peace_of_mind": "مع راحة البال."
+  },
+  "route_paths": {
+    "navigation_screen": "/navigationScreen",
+    "onboarding_screen": "/onboardingScreen",
+    "authentication_screen": "/authenticationScreen",
+    "booking_confirmation_screen": "/bookingConfirmationScreen",
+    "review_booking_details_screen": "/reviewBookingDetailsScreen",
+    "technician_profile_screen": "/technicianProfileScreen",
+    "service_in_progress_screen": "/serviceInProgressScreen",
+    "final_bill_screen": "/finalBillScreen",
+    "rating_and_review_screen": "/ratingAndReviewScreen",
+    "receipt_screen": "/receiptScreen",
+    "fixly_assistant_screen": "/fixlyAssistantScreen",
+    "chat_providers_details_screen": "/chatProvidersDetailsScreen"
+  },
+  "asset_paths": {
+    "customer_onboarding_1": "assets/lotties/customer_onboarding_1.json",
+    "customer_onboarding_2": "assets/lotties/customer_onboarding_2.json",
+    "customer_onboarding_3": "assets/lotties/customer_onboarding_3.json",
+    "technician_onboarding_1": "assets/lotties/technician_onboarding_1.json",
+    "technician_onboarding_2": "assets/lotties/technician_onboarding_2.json",
+    "technician_onboarding_3": "assets/lotties/technician_onboarding_3.json",
+    "customer_profile_image": "assets/images/customer_profile_image.jpg",
+    "translations_path": "assets/translations"
+  },
+  "localization": {
+    "supported_locales": [
+      "en",
+      "ar"
+    ],
+    "fallback_locale": "ar",
+    "start_locale": "ar"
+  },
+  "api_and_configuration": {
+    "supabase_url": "https://upjwyddbftenlgqkbfiu.supabase.co",
+    "role_user": "مستخدم",
+    "role_assistant": "مساعد",
+    "service_none": "لا شيء",
+    "content_key": "المحتوى",
+    "role_key": "الدور",
+    "service_key": "الخدمة",
+    "response_key": "الرد",
+    "first_name_key": "الاسم الأول",
+    "last_name_key": "الاسم الأخير",
+    "rating_key": "التقييم",
+    "services_offered_key": "الخدمات المقدمة"
+  },
+  "sample_values": {
+    "sample_time_45": "45",
+    "sample_price_50": "50",
+    "sample_price_75": "75",
+    "sample_price_60": "60",
+    "sample_price_250": "250",
+    "sample_rating_48": "4.8",
+    "sample_rating_5": "5",
+    "sample_rating_4": "4",
+    "sample_count_3": "3",
+    "sample_percentage_95": "95%",
+    "sample_percentage_98": "98%",
+    "sample_balance_1250": "1250 ج.م"
+  },
+  "separator_and_formatting": {
+    "bullet_separator": " • ",
+    "newline_prefix": "\n"
+  },
+  "questions": {
+    "how_can_help": "ما الذي يمكننا إصلاحه لك اليوم؟"
   }
 };
 static const Map<String,dynamic> _en = {
@@ -489,7 +562,7 @@ static const Map<String,dynamic> _en = {
     "sample_count_3": "3 ",
     "sample_percentage_95": "95% ",
     "sample_percentage_98": "98% ",
-    "sample_balance_1250": "$1,250.00 "
+    "sample_balance_1250": "1,250.00 "
   },
   "separator_and_formatting": {
     "bullet_separator": " • ",
