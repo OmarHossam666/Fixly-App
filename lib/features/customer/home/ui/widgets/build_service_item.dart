@@ -3,14 +3,16 @@ import 'package:fixly/core/widgets/surface_dark.dart';
 import 'package:fixly/features/customer/home/logic/service_functions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:fixly/features/customer/home/models/service.dart';
 
 Widget buildServiceItem(
   BuildContext context,
   Map<String, dynamic> subservice,
+  Service service,
   Color categoryColor,
 ) {
   return InkWell(
-    onTap: () => handleServiceSelect(context, subservice['id']),
+    onTap: () => handleServiceSelect(context, service.name),
     child: SurfaceDark(
       margin: EdgeInsets.only(bottom: 12.h),
       padding: EdgeInsets.all(16.r),

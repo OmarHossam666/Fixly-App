@@ -55,6 +55,7 @@ class ServiceDetailsScreen extends StatelessWidget {
                           (subservice) => buildServiceItem(
                             context,
                             subservice,
+                            service,
                             service.color,
                           ),
                         ),

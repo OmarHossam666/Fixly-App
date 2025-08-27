@@ -6,7 +6,7 @@ class ServiceData {
   static const List<Service> popularServices = [
     Service(
       id: 1,
-      name: "Plumbing",
+      name: "plumber",
       icon: Icons.water_drop_outlined,
       color: Color(0xFF3B82F6),
       description: "Pipes, faucets, leaks", subservices:  [
@@ -44,7 +44,7 @@ class ServiceData {
     ),
     Service(
       id: 2,
-      name: "Electricity",
+      name: "electrician",
       icon: Icons.flash_on_outlined,
       color: Color(0xFFF59E0B),
       description: "Wiring, outlets, switches", subservices: [
