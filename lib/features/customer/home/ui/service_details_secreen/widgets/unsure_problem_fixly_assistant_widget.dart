@@ -49,7 +49,7 @@ class UnsureProblemFixlyAssistantWidget extends StatelessWidget {
                     ),
                     verticalSpacing(4),
                     Text(
-                      LocaleKeys.chat_and_messaging_chat_with_fixly_assistant,
+                      LocaleKeys.chat_and_messaging_chat_with_fixly_assistant.tr(),
                       style: TextStyle(fontSize: 14.sp, color: Colors.white),
                     ),
                   ],
