@@ -22,10 +22,10 @@ Future<void> main() async {
     ChangeNotifierProvider(
       create: (context) => ThemeProvider(),
       child: EasyLocalization(
-      supportedLocales: [Locale('en'), Locale('ar')],
+      supportedLocales: const [Locale('en'), Locale('ar')],
       path:
           'assets/translations', // <-- change the path of the translation files
-      fallbackLocale: Locale('ar'),
+      fallbackLocale: const Locale('ar'),
       startLocale: const Locale('ar'),
 
 
