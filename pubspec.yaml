@@ -23,6 +23,9 @@ dependencies:
   firebase_core: ^4.0.0
 
   supabase_flutter: ^2.9.1
+
+  easy_localization: ^3.0.8
+
   http: ^1.5.0
   
   # for state management and theme persistence
@@ -46,6 +49,7 @@ flutter:
   - assets/fonts/
   - assets/icons/
   - assets/lotties/
+  - assets/translations/
 
   fonts:
     - family: Quicksand
