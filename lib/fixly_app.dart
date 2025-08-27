@@ -56,6 +56,8 @@ class _FixlyAppState extends State<FixlyApp> {
               darkTheme: AppTheme.dark,
               themeMode: themeProvider.themeMode,
               routerConfig: selectedRouter!,
+              themeAnimationCurve: Curves.easeInOut,
+              themeAnimationDuration: const Duration(microseconds: 500),
             );
           },
         );
