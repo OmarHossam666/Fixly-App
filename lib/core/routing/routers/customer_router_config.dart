@@ -72,9 +72,9 @@ class CustomerRouterConfig {
       GoRoute(
         path: CustomerRoutes.fixlyAssistantScreen,
         name: CustomerRoutes.fixlyAssistantScreen.substring(1),
-        builder: (context, state) =>  const FixlyAssistantScreen(),
+        builder: (context, state) => const FixlyAssistantScreen(),
       ),
-        GoRoute(
+      GoRoute(
         path: CustomerRoutes.chatProvidersDetailsScreen,
         name: CustomerRoutes.chatProvidersDetailsScreen.substring(1),
         builder: (context, state) {
@@ -84,10 +84,12 @@ class CustomerRouterConfig {
           } catch (e) {
             providersList = null;
           }
-          return FixlyAssistantChatProvidersDetailsScreen(providersList: providersList);
+          return FixlyAssistantChatProvidersDetailsScreen(
+            providersList: providersList,
+          );
         },
       ),
-       GoRoute(
+      GoRoute(
         path: CustomerRoutes.serviceDetailsScreen,
         name: CustomerRoutes.serviceDetailsScreen.substring(1),
         builder: (context, state) {

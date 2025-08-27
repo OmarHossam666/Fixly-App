@@ -8,8 +8,7 @@ class Service {
   final String description;
   final List<Map<String, dynamic>>? subservices;
 
-  const Service(
-   {
+  const Service({
     required this.id,
     required this.name,
     required this.icon,

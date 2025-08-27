@@ -11,6 +11,7 @@ void handleChatbot(BuildContext context) {
 void handleServiceSelect(BuildContext context, String serviceId) {
   // Navigate to specific service screen
   // Navigator.pushNamed(context, '/service/$category/$serviceId');
+  context.push(CustomerRoutes.chatProvidersDetailsScreen, extra: serviceId);
 }
 
 void handleUnsure(BuildContext context) {
