@@ -29,6 +29,7 @@
     "total_balance": "الرصيد الكلي"
   },
   "services": {
+    "our_most_popular_services": "أكثر خدماتنا شهرة",
     "electrical_wiring": "تمديدات كهربائية",
     "ac_repair": "تصليح المكيف",
     "plumbing_fix": "إصلاح السباكة"
@@ -78,7 +79,10 @@
     "view_technicians": "عرض الفنيين",
     "view_profile": "عرض الملف الشخصي",
     "book_now": "احجز الآن",
-    "logout": "تسجيل الخروج"
+    "logout": "تسجيل الخروج",
+    "call": "اتصل",
+    "cancel": "إلغاء",
+    "you_selected": "لقد اخترت"
   },
   "chat_and_messaging": {
     "thinking_message": "⏳ دعني أفكر...",
@@ -88,13 +92,22 @@
     "list_view": "عرض قائمة",
     "map_view": "عرض الخريطة",
     "map_view_coming_soon": "🗺 عرض الخريطة قريباً...",
-    "no_technicians_found": "لا يوجد فنيون متاحون بالقرب منك."
+    "no_technicians_found": "لا يوجد فنيون متاحون بالقرب منك.",
+    "common_issues": "مشاكل شائعة",
+    "something_else": "شيء آخر / غير متأكد",
+    "let_assistant_help_you_identify_the_problem": "دع مساعدنا يساعدك في تحديد المشكلة",
+    "unsure_what_the_problem_is": "غير متأكد ما هي المشكلة؟",
+    "chat_with_fixly_assistant": "تحدث مع مساعد صلّحلي للحصول على تشخيص سريع!"
   },
   "technician_verification": {
     "id_verified": "الهوية موثقة",
     "background_checked": "فحص الخلفية",
     "fixly_trained": "تدريب صلّحلي",
-    "fixly_flash": "فلاش صلّحلي"
+    "fixly_flash": "'⚡ Fixly Flash'"
+  },
+
+  "technician": {
+    "emergency_technician_will_arrive_within_60_minutes_Continue": "سيصل الفني الطارئ في غضون 60 دقيقة. متابعة؟"
   },
   "profile_sections": {
     "contact_information": "معلومات الاتصال",
@@ -210,8 +223,7 @@
     "trusted_technician": "فني يمكنك الوثوق به...",
     "peace_of_mind": "مع راحة البال."
   },
- 
- 
+
   "localization": {
     "supported_locales": ["en", "ar"],
     "fallback_locale": "ar",
@@ -250,6 +262,13 @@
     "newline_prefix": "\n"
   },
   "questions": {
-    "how_can_help": "ما الذي يمكننا إصلاحه لك اليوم؟"
+    "how_can_help": "ما الذي يمكننا إصلاحه لك اليوم؟",
+    "need_technician_urgently": "هل تحتاج إلى فني بسرعة؟ اطلب الآن واحصل على المساعدة في غضون 60 دقيقة."
+  },
+
+  "user": {
+    "name": "Omar",
+    "email": "user@example.com",
+    "phone": "+1234567890"
   }
 }

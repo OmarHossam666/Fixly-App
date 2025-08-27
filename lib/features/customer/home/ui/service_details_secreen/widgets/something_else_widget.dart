@@ -1,5 +1,7 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:fixly/core/helpers/spacing.dart';
 import 'package:fixly/features/customer/home/logic/service_functions.dart';
+import 'package:fixly/generated/locale_keys.g.dart';
 import 'package:flutter/material.dart';
 
 class SomethingElseWidget extends StatelessWidget {
@@ -41,7 +43,7 @@ class SomethingElseWidget extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const Text(
-                    'Something Else / Not Sure',
+                    LocaleKeys.chat_and_messaging_something_else,
                     style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.w600,
@@ -49,9 +51,9 @@ class SomethingElseWidget extends StatelessWidget {
                     ),
                   ),
                   verticalSpacing(4),
-                  const Text(
-                    'Let our assistant help you identify the problem',
-                    style: TextStyle(
+                   Text(
+                    LocaleKeys.chat_and_messaging_let_assistant_help_you_identify_the_problem.tr(),
+                    style: const TextStyle(
                       fontSize: 14,
                       color: Color(0xFF9CA3AF),
                       height: 1.3,
