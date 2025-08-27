@@ -42,9 +42,9 @@ class SomethingElseWidget extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text(
-                    LocaleKeys.chat_and_messaging_something_else,
-                    style: TextStyle(
+                   Text(
+                    LocaleKeys.chat_and_messaging_something_else.tr(),
+                    style: const TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.w600,
                       color: Colors.white,
