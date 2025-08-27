@@ -1,5 +1,4 @@
 import 'package:fixly/core/helpers/spacing.dart';
-import 'package:fixly/core/widgets/custom_elevated_button.dart';
 import 'package:fixly/core/widgets/surface_dark.dart';
 import 'package:fixly/features/customer/chat/ui/fixly_assistant_screen/widgets/photo_name_services_rating.dart';
 import 'package:fixly/features/customer/chat/ui/fixly_assistant_screen/widgets/view_profile_book_now_row.dart';

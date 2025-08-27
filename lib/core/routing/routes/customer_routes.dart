@@ -11,4 +11,5 @@ class CustomerRoutes {
   static const String receiptScreen = '/receiptScreen';
   static const String fixlyAssistantScreen = '/fixlyAssistantScreen';
   static const String chatProvidersDetailsScreen = '/chatProvidersDetailsScreen';
+  static const String serviceDetailsScreen = '/serviceDetailsScreen';
 }

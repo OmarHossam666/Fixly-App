@@ -5,6 +5,8 @@ import 'package:fixly/features/customer/booking_confirmation/ui/booking_confirma
 import 'package:fixly/features/customer/chat/ui/fixly_assistant_screen/fixly_assistant_chat_providers_details_screen.dart';
 import 'package:fixly/features/customer/chat/ui/fixly_assistant_screen/fixly_assistant_screen.dart';
 import 'package:fixly/features/customer/final_bill/ui/final_bill_screen.dart';
+import 'package:fixly/features/customer/home/models/service.dart';
+import 'package:fixly/features/customer/home/ui/service_details_secreen/service_details_screen.dart';
 import 'package:fixly/features/onboarding/ui/customer_onboarding_screen.dart';
 import 'package:fixly/features/customer/rating_and_review/ui/rating_and_review_screen.dart';
 import 'package:fixly/features/customer/receipt/ui/receipt_screen.dart';
@@ -83,6 +85,15 @@ class CustomerRouterConfig {
             providersList = null;
           }
           return FixlyAssistantChatProvidersDetailsScreen(providersList: providersList);
+        },
+      ),
+       GoRoute(
+        path: CustomerRoutes.serviceDetailsScreen,
+        name: CustomerRoutes.serviceDetailsScreen.substring(1),
+        builder: (context, state) {
+          final Service service = state.extra as Service;
+
+          return ServiceDetailsScreen(service: service);
         },
       ),
     ],
