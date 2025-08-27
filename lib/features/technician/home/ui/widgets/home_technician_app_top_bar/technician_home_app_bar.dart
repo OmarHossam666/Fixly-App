@@ -20,6 +20,7 @@ class TechnicianHomeAppBar extends StatelessWidget {
           children: [
             const Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
+
               children: [LogoAndTitle(), Spacer(), ThemeToggleSwitch()],
             ),
             verticalSpacing(15),

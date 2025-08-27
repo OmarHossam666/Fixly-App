@@ -1,5 +1,6 @@
 import 'package:fixly/core/constants/app_colors.dart';
 import 'package:fixly/core/constants/app_styles.dart';
+import 'package:fixly/core/routing/routes/customer_routes.dart';
 import 'package:fixly/core/widgets/theme_toggle_button.dart';
 import 'package:fixly/features/customer/home/data/services.dart';
 import 'package:fixly/features/customer/home/models/service.dart';
@@ -80,6 +81,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ElevatedButton(
               onPressed: () {
                 context.pop();
+                context.push(CustomerRoutes.serviceDetailsScreen, extra: service);
                 // Navigate to service booking
               },
               style: ElevatedButton.styleFrom(
