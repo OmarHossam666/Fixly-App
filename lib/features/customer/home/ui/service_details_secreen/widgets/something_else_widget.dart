@@ -47,6 +47,7 @@ class SomethingElseWidget extends StatelessWidget {
                     LocaleKeys.chat_and_messaging_something_else.tr(),
                     style: TextStyle(
                       fontSize: 16.sp,
+
                       fontWeight: FontWeight.w600,
                       color: Colors.white,
                     ),

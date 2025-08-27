@@ -4,7 +4,7 @@ import 'package:fixly/core/helpers/spacing.dart';
 import 'package:fixly/features/customer/home/ui/service_details_secreen/widgets/service_details_screen_header.dart';
 import 'package:fixly/features/customer/home/ui/service_details_secreen/widgets/something_else_widget.dart';
 import 'package:fixly/features/customer/home/ui/service_details_secreen/widgets/unsure_problem_fixly_assistant_widget.dart';
-import 'package:fixly/features/customer/home/ui/widgets/build_service_item.dart';
+import 'package:fixly/features/customer/home/ui/service_details_secreen/widgets/build_service_item.dart';
 import 'package:fixly/generated/locale_keys.g.dart';
 import 'package:flutter/material.dart';
 import 'package:fixly/features/customer/home/models/service.dart';
@@ -55,6 +55,7 @@ class ServiceDetailsScreen extends StatelessWidget {
                           (subservice) => buildServiceItem(
                             context,
                             subservice,
+                            service,
                             service.color,
                           ),
                         ),

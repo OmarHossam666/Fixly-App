@@ -1,3 +1,4 @@
+import 'package:fixly/core/network/gemini/service_providers_database.dart';
 import 'package:fixly/core/routing/routes/customer_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -8,10 +9,11 @@ void handleChatbot(BuildContext context) {
   context.push(CustomerRoutes.fixlyAssistantScreen);
 }
 
-void handleServiceSelect(BuildContext context, String serviceId) {
+void handleServiceSelect(BuildContext context, String serviceName) async {
   // Navigate to specific service screen
-  // Navigator.pushNamed(context, '/service/$category/$serviceId');
-  context.push(CustomerRoutes.chatProvidersDetailsScreen, extra: serviceId);
+  final availableTechniciansList = await ServiceProvidersDatabase().getProviders(service: serviceName);
+  print(availableTechniciansList);
+  context.push(CustomerRoutes.chatProvidersDetailsScreen, extra: availableTechniciansList);
 }
 
 void handleUnsure(BuildContext context) {
