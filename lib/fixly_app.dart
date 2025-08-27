@@ -20,47 +20,52 @@ class _FixlyAppState extends State<FixlyApp> {
 
   @override
   Widget build(BuildContext context) {
-    return ScreenUtilInit(
-      designSize: const Size(393, 852),
-      minTextAdapt: true,
-      splitScreenMode: true,
-      builder: (context, child) {
-        if (selectedRouter == null) {
-          // ✅ No router chosen yet → show who are you screen
-          return MaterialApp(
-            debugShowCheckedModeBanner: false,
-            theme: AppTheme.light,
-            darkTheme: AppTheme.dark,
-            themeMode: ThemeMode.dark,
-            localizationsDelegates: context.localizationDelegates,
-            supportedLocales: context.supportedLocales,
-            locale: context.locale,
-            home: WhoAreYouScreen(
-              onChooseRouter: (choice) {
-                setState(() {
-                  selectedRouter = choice == RouterChoice.customer
-                      ? CustomerRouterConfig.router
-                      : choice == RouterChoice.technician
-                      ? TechnicianRouterConfig.router
-                      : null;
-                });
-              },
-            ),
-          );
-        }
-
-        // ✅ Router chosen → load router app
-        return MaterialApp.router(
-          debugShowCheckedModeBanner: false,
-          theme: AppTheme.light,
-          darkTheme: AppTheme.dark,
-          themeMode: ThemeMode.dark,
-          localizationsDelegates: context.localizationDelegates,
-          supportedLocales: context.supportedLocales,
-          locale: context.locale,
-          routerConfig: selectedRouter!,
+    return Consumer<ThemeProvider>(
+      builder: (context, themeProvider, child) {
+        return ScreenUtilInit(
+          designSize: const Size(393, 852),
+          minTextAdapt: true,
+          splitScreenMode: true,
+          builder: (context, child) {
+            if (selectedRouter == null) {
+              // ✅ No router chosen yet → show who are you screen
+              return MaterialApp(
+                debugShowCheckedModeBanner: false,
+                theme: AppTheme.light,
+                darkTheme: AppTheme.dark,
+                themeMode: themeProvider.themeMode,
+                localizationsDelegates: context.localizationDelegates,
+                supportedLocales: context.supportedLocales,
+                locale: context.locale,
+                home: WhoAreYouScreen(
+                  onChooseRouter: (choice) {
+                    setState(() {
+                      selectedRouter = choice == RouterChoice.customer
+                          ? CustomerRouterConfig.router
+                          : choice == RouterChoice.technician
+                          ? TechnicianRouterConfig.router
+                          : null;
+                    });
+                  },
+                ),
+              );
+            }
+            // ✅ Router chosen → load router app
+            return MaterialApp.router(
+              debugShowCheckedModeBanner: false,
+              theme: AppTheme.light,
+              darkTheme: AppTheme.dark,
+              themeMode: themeProvider.themeMode,
+              localizationsDelegates: context.localizationDelegates,
+              supportedLocales: context.supportedLocales,
+              locale: context.locale,
+              routerConfig: selectedRouter!,
+              themeAnimationCurve: Curves.easeInOut,
+              themeAnimationDuration: const Duration(microseconds: 500),
+            );
+          },
         );
-      },
+      }
     );
   }
 }
