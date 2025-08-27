@@ -30,6 +30,7 @@
     "seconds_left": "s Left"
   },
   "services": {
+    "our_most_popular_services": "Our Most Popular Services",
     "electrical_wiring": "Electrical Wiring",
     "ac_repair": "AC Repair",
     "plumbing_fix": "Plumbing Fix"
@@ -79,7 +80,10 @@
     "view_technicians": "View Technicians",
     "view_profile": "View Profile",
     "book_now": "Book Now",
-    "logout": "Logout"
+    "logout": "Logout",
+    "call": "Call",
+    "cancel": "Cancel",
+    "you_selected": "You selected"
   },
   "chat_and_messaging": {
     "thinking_message": "⏳ Let me think...",
@@ -89,13 +93,22 @@
     "list_view": "List View",
     "map_view": "Map View",
     "map_view_coming_soon": "🗺 Map View Coming Soon...",
-    "no_technicians_found": "No available technicians found nearby."
+    "no_technicians_found": "No available technicians found nearby.",
+    "common_issues": "Common Issues",
+    "something_else": "Something Else / Not Sure",
+    "let_assistant_help_you_identify_the_problem": "Let our assistant help you identify the problem",
+    "unsure_what_the_problem_is": "Unsure what the problem is?",
+    "chat_with_fixly_assistant": "Chat with the Fixly Assistant for a quick diagnosis!"
   },
   "technician_verification": {
     "id_verified": "ID Verified",
     "background_checked": "Background Checked",
     "fixly_trained": "Fixly Trained",
-    "fixly_flash": "FIXLY FLASH"
+    "fixly_flash": "⚡ Fixly Flash"
+  },
+
+  "technician": {
+    "emergency_technician_will_arrive_within_60_minutes_Continue": "Emergency technician will arrive within 60 minutes. Continue?"
   },
   "profile_sections": {
     "contact_information": "contact_information",
@@ -273,6 +286,13 @@
   },
 
   "questions": {
-    "how_can_help": "What can we fix for you today?"
+    "how_can_help": "What can we fix for you today?",
+    "need_technician_urgently": "Need a technician urgently? Order now and get help within 60 minutes."
+  },
+
+  "user": {
+    "name": "Omar",
+    "email": "user@example.com",
+    "phone": "+1234567890"
   }
 }

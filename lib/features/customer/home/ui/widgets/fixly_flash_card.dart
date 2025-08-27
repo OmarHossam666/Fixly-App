@@ -1,5 +1,7 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:fixly/core/constants/app_colors.dart';
 import 'package:fixly/core/constants/app_styles.dart';
+import 'package:fixly/generated/locale_keys.g.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -61,14 +63,14 @@ class FixlyFlashCard extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              '⚡ Fixly Flash',
+                              LocaleKeys.technician_verification_fixly_flash.tr(),
                               style: context.textStyles.screenTitle.copyWith(
                                 color: backgroundColor,
                               ),
                             ),
                             SizedBox(height: 4.h),
                             Text(
-                              'Need a technician urgently? Order now and get help within 60 minutes.',
+                              LocaleKeys.questions_need_technician_urgently.tr(),
                               style: context.textStyles.bodyText.copyWith(
                                 color: context.colors.textOnAccent,
                               ),

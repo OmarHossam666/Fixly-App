@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:fixly/core/constants/app_colors.dart';
 import 'package:fixly/core/constants/app_styles.dart';
 import 'package:fixly/core/routing/routes/customer_routes.dart';
@@ -7,6 +8,7 @@ import 'package:fixly/features/customer/home/models/service.dart';
 import 'package:fixly/features/customer/home/ui/widgets/custom_search_bar.dart';
 import 'package:fixly/features/customer/home/ui/widgets/fixly_flash_card.dart';
 import 'package:fixly/features/customer/home/ui/widgets/service_card.dart';
+import 'package:fixly/generated/locale_keys.g.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
@@ -34,15 +36,15 @@ class _HomeScreenState extends State<HomeScreen> {
       builder: (BuildContext context) {
         return AlertDialog(
           backgroundColor: context.colors.surface,
-          title: Text('⚡ Fixly Flash', style: context.textStyles.headline),
+          title: Text(LocaleKeys.technician_verification_fixly_flash.tr(), style: context.textStyles.headline),
           content: Text(
-            'Emergency technician will arrive within 60 minutes. Continue?',
+            LocaleKeys.technician_emergency_technician_will_arrive_within_60_minutes_Continue.tr(),
             style: context.textStyles.bodyText,
           ),
           actions: [
             TextButton(
               onPressed: () => context.pop(),
-              child: Text('Cancel', style: context.textStyles.primaryButton),
+              child: Text(LocaleKeys.buttons_and_actions_cancel.tr(), style: context.textStyles.primaryButton),
             ),
             ElevatedButton(
               onPressed: () {
@@ -54,7 +56,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 backgroundColor: context.colors.primaryButton,
                 foregroundColor: context.colors.primaryButtonText,
               ),
-              child: Text('Book Now', style: context.textStyles.primaryButton),
+              child: Text(LocaleKeys.buttons_and_actions_book_now.tr(), style: context.textStyles.primaryButton),
             ),
           ],
         );
@@ -81,7 +83,10 @@ class _HomeScreenState extends State<HomeScreen> {
             ElevatedButton(
               onPressed: () {
                 context.pop();
-                context.push(CustomerRoutes.serviceDetailsScreen, extra: service);
+                context.push(
+                  CustomerRoutes.serviceDetailsScreen,
+                  extra: service,
+                );
                 // Navigate to service booking
               },
               style: ElevatedButton.styleFrom(
@@ -237,7 +242,7 @@ class _HomeScreenState extends State<HomeScreen> {
             child: Padding(
               padding: EdgeInsets.symmetric(horizontal: 20.w),
               child: Text(
-                'Our Most Popular Services',
+                LocaleKeys.services_our_most_popular_services.tr(),
                 style: context.textStyles.sectionHeader,
               ),
             ),

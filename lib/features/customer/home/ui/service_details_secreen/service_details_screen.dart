@@ -1,9 +1,11 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:fixly/core/constants/app_colors.dart';
 import 'package:fixly/core/helpers/spacing.dart';
 import 'package:fixly/features/customer/home/ui/service_details_secreen/widgets/service_details_screen_header.dart';
 import 'package:fixly/features/customer/home/ui/service_details_secreen/widgets/something_else_widget.dart';
 import 'package:fixly/features/customer/home/ui/service_details_secreen/widgets/unsure_problem_fixly_assistant_widget.dart';
 import 'package:fixly/features/customer/home/ui/widgets/build_service_item.dart';
+import 'package:fixly/generated/locale_keys.g.dart';
 import 'package:flutter/material.dart';
 import 'package:fixly/features/customer/home/models/service.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -38,9 +40,9 @@ class ServiceDetailsScreen extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const Text(
-                          'Common Issues',
-                          style: TextStyle(
+                        Text(
+                          LocaleKeys.chat_and_messaging_common_issues.tr(),
+                          style: const TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.w600,
                             color: Colors.white,

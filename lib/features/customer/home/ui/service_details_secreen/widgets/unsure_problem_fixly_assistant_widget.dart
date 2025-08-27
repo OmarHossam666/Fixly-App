@@ -1,6 +1,8 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:fixly/core/constants/app_colors.dart';
 import 'package:fixly/core/helpers/spacing.dart';
 import 'package:fixly/features/customer/home/logic/service_functions.dart';
+import 'package:fixly/generated/locale_keys.g.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -38,7 +40,7 @@ class UnsureProblemFixlyAssistantWidget extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Unsure what the problem is?',
+                      LocaleKeys.chat_and_messaging_unsure_what_the_problem_is.tr(),
                       style: TextStyle(
                         fontSize: 16.sp,
                         fontWeight: FontWeight.w600,
@@ -47,7 +49,7 @@ class UnsureProblemFixlyAssistantWidget extends StatelessWidget {
                     ),
                     verticalSpacing(4),
                     Text(
-                      'Chat with the Fixly Assistant for a quick diagnosis!',
+                      LocaleKeys.chat_and_messaging_chat_with_fixly_assistant,
                       style: TextStyle(fontSize: 14.sp, color: Colors.white),
                     ),
                   ],

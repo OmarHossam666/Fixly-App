@@ -1,5 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:fixly/core/constants/app_styles.dart';
+import 'package:fixly/generated/locale_keys.g.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -47,23 +48,23 @@ class CustomBottomNavigationBar extends StatelessWidget {
           items:  [
             BottomNavigationBarItem(
               icon: const Icon(Icons.home_outlined),
-              label: 'navigation_labels.home'.tr(),
+              label: LocaleKeys.navigation_labels_home.tr(),
               activeIcon: const Icon(Icons.home),
             ),
             BottomNavigationBarItem(
               icon: const Icon(Icons.chat_outlined),
-              label: 'navigation_labels.chat'.tr(),
+              label: LocaleKeys.navigation_labels_chat.tr(),
               activeIcon: const Icon(Icons.chat),
             ),
 
             BottomNavigationBarItem(
               icon: const Icon(Icons.book_online_outlined),
-              label: 'navigation_labels.my_bookings'.tr(),
+              label: LocaleKeys.navigation_labels_my_bookings.tr(),
               activeIcon: const Icon(Icons.book_online),
             ),
             BottomNavigationBarItem(
               icon: const Icon(Icons.person_outline),
-              label: 'navigation_labels.profile'.tr(),
+              label: LocaleKeys.navigation_labels_profile.tr(),
               activeIcon: const Icon(Icons.person),
             ),
           ],
