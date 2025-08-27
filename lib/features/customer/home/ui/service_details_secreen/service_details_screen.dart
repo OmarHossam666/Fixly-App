@@ -11,8 +11,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 class ServiceDetailsScreen extends StatelessWidget {
   final Service service;
 
-  const ServiceDetailsScreen({Key? key, required this.service})
-    : super(key: key);
+  const ServiceDetailsScreen({super.key, required this.service});
 
   @override
   Widget build(BuildContext context) {

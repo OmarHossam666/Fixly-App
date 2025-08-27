@@ -159,8 +159,9 @@ class FixlyAssistantScreenState extends State<FixlyAssistantScreen> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 40, right: 40, bottom: 30),
+              padding: EdgeInsets.all(16.r),
               child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Expanded(
                     flex: 4,
@@ -175,13 +176,13 @@ class FixlyAssistantScreenState extends State<FixlyAssistantScreen> {
                           focusedBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(50.r),
                             borderSide: BorderSide(
-                              color: context.colors.borderLight,
+                              color: context.colors.primary,
                             ),
                           ),
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(50.r),
                             borderSide: BorderSide(
-                              color: context.colors.borderLight,
+                              color: context.colors.border,
                             ),
                           ),
                         ),
@@ -201,7 +202,6 @@ class FixlyAssistantScreenState extends State<FixlyAssistantScreen> {
                       },
                       icon: Transform.rotate(
                         angle: -0.7, // in radians (~ -28.6°)
-
                         child: Icon(
                           Icons.send,
                           color: context.colors.textOnAccent,

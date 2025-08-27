@@ -1,5 +1,4 @@
 import 'package:easy_localization/easy_localization.dart';
-import 'package:fixly/core/constants/app_strings.dart';
 import 'package:fixly/core/constants/app_styles.dart';
 import 'package:fixly/core/helpers/spacing.dart';
 import 'package:fixly/core/widgets/on_surface.dart';

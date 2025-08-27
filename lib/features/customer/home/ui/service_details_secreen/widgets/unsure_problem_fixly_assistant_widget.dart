@@ -28,8 +28,8 @@ class UnsureProblemFixlyAssistantWidget extends StatelessWidget {
                   color: Colors.white.withAlpha(50),
                   borderRadius: BorderRadius.circular(24),
                 ),
-                child: const Center(
-                  child: Text('🤔', style: TextStyle(fontSize: 20)),
+                child: Center(
+                  child: Text('🤔', style: TextStyle(fontSize: 20.sp)),
                 ),
               ),
               horizontalSpacing(16),
@@ -37,23 +37,23 @@ class UnsureProblemFixlyAssistantWidget extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Text(
+                    Text(
                       'Unsure what the problem is?',
                       style: TextStyle(
-                        fontSize: 16,
+                        fontSize: 16.sp,
                         fontWeight: FontWeight.w600,
                         color: Colors.white,
                       ),
                     ),
                     verticalSpacing(4),
-                    const Text(
+                    Text(
                       'Chat with the Fixly Assistant for a quick diagnosis!',
-                      style: TextStyle(fontSize: 14, color: Colors.white),
+                      style: TextStyle(fontSize: 14.sp, color: Colors.white),
                     ),
                   ],
                 ),
               ),
-              const Icon(Icons.chevron_right, size: 20, color: Colors.white),
+              Icon(Icons.chevron_right, size: 20.sp, color: Colors.white),
             ],
           ),
         ),

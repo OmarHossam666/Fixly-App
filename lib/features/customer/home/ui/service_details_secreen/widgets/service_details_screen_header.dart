@@ -1,8 +1,10 @@
+import 'package:fixly/core/constants/app_colors.dart';
 import 'package:fixly/core/helpers/spacing.dart';
 import 'package:fixly/core/widgets/surface_dark.dart';
 import 'package:flutter/material.dart';
 import 'package:fixly/features/customer/home/models/service.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 
 class ServiceDetailsScreenHeader extends StatelessWidget {
   final Service service;
@@ -21,17 +23,17 @@ class ServiceDetailsScreenHeader extends StatelessWidget {
       child: Row(
         children: [
           InkWell(
-            onTap: () => Navigator.pop(context),
+            onTap: () => context.pop(),
             child: SurfaceDark(
               width: 40.w,
               height: 40.w,
 
               borderRadiusAll: true,
               allRadius: 20,
-              child: const Icon(
-                Icons.arrow_back,
-                size: 20,
-                color: Colors.white,
+              child: Icon(
+                Icons.arrow_back_ios_new,
+                size: 20.r,
+                color: context.colors.primary,
               ),
             ),
           ),
