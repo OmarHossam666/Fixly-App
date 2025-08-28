@@ -11,11 +11,7 @@ void handleChatbot(BuildContext context) {
 
 void handleServiceSelect(BuildContext context, String serviceName) async {
   // Navigate to specific service screen
-<<<<<<< HEAD
-  final availableTechniciansList = await ServiceProvidersDatabase().getProviders(service: serviceName);
-  if(context.mounted) {
-    context.push(CustomerRoutes.chatProvidersDetailsScreen, extra: availableTechniciansList);
-=======
+
   final availableTechniciansList = await ServiceProvidersDatabase()
       .getProviders(service: serviceName);
   if (context.mounted) {
@@ -23,7 +19,6 @@ void handleServiceSelect(BuildContext context, String serviceName) async {
       CustomerRoutes.chatProvidersDetailsScreen,
       extra: availableTechniciansList,
     );
->>>>>>> bc5d2289c466caf86910f42cad3ec884973a152e
   }
 }
 
