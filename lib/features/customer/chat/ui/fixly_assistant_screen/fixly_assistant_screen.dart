@@ -254,7 +254,6 @@ class FixlyAssistantScreenState extends State<FixlyAssistantScreen> {
       chatList.removeLast(); // Remove "thinking..."
       chatList.add({"content": result['response'], "role": "assistant"});
       if (result['service'] != 'none') {
-        print(result['service']);
         return ServiceProvidersDatabase().getProviders(
           service: result['service'],
         );
