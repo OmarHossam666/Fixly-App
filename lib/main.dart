@@ -26,7 +26,7 @@ Future<void> main() async {
       path:
           'assets/translations', // <-- change the path of the translation files
       fallbackLocale: const Locale('ar'),
-      startLocale: const Locale('en'),
+      startLocale: const Locale('ar'),
       child: const FixlyApp(),
       ),
     ),
